@@ -36,3 +36,23 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 
 ---
 *Dashboard metrics updated automatically by GitHub Actions workflow container panel.*
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## String
+|  |
+| ------- |
+| [1871-jump-game-vii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1871-jump-game-vii) |
+## Dynamic Programming
+|  |
+| ------- |
+| [1871-jump-game-vii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1871-jump-game-vii) |
+## Sliding Window
+|  |
+| ------- |
+| [1871-jump-game-vii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1871-jump-game-vii) |
+## Prefix Sum
+|  |
+| ------- |
+| [1871-jump-game-vii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1871-jump-game-vii) |
+<!---LeetCode Topics End-->

@@ -2,8 +2,8 @@ name: Automated Daily LeetCode Sync
 
 on:
   schedule:
-    - cron: '0 18 * * *'  # 11:30 PM IST Daily
-  workflow_dispatch:      # Allows to trigger it manually via the website UI
+    - cron: '0 18 * * *'  # Executes daily at 11:30 PM IST
+  workflow_dispatch:
 
 jobs:
   build-and-sync-pipeline:
@@ -26,9 +26,16 @@ jobs:
         pip install requests
 
     - name: Run Code Sync Engine (Step 1)
+      env:
+        # 🔒 Passing your secure browser authentication values straight to the python script runtime environment
+        LEETCODE_CSRF: ${{ secrets.LEETCODE_CSRF }}
+        LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
       run: python -u sync.py
 
     - name: Run Analytics Dashboard Engine (Step 2)
+      env:
+        LEETCODE_CSRF: ${{ secrets.LEETCODE_CSRF }}
+        LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
       run: python -u analytics.py
 
     - name: Commit and Push Sequenced Updates (Step 3)

@@ -32,12 +32,18 @@ LANGUAGE_CONFIGS = {
 
 def fetch_recent_submissions():
     variables = {"username": LEETCODE_USERNAME, "limit": 20}
-    # Real-world browser impersonation headers to pass GitHub cloud runtime actions cleanly
+    
+    # Extract cookies securely from the GitHub runner container environment
+    csrf_token = os.environ.get("LEETCODE_CSRF", "")
+    session_token = os.environ.get("LEETCODE_SESSION", "")
+    
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "Content-Type": "application/json",
-        "Referer": f"https://leetcode.com/{LEETCODE_USERNAME}/",
-        "Origin": "https://leetcode.com"
+        "Referer": f"https://leetcode.com{LEETCODE_USERNAME}/",
+        "Origin": "https://leetcode.com",
+        "X-CSRFToken": csrf_token,
+        "Cookie": f"csrftoken={csrf_token}; LEETCODE_SESSION={session_token};"
     }
     try:
         response = requests.post(GRAPHQL_URL, json={"query": QUERY, "variables": variables}, headers=headers, timeout=15)
@@ -46,7 +52,7 @@ def fetch_recent_submissions():
         else:
             print(f"GraphQL Query blocked by server firewall. Status: {response.status_code}")
     except Exception as e:
-        print(f"Connection Error: {e}")
+        print(f"Sync Connection Error: {e}")
     return []
 
 def calculate_similarity(old_file_path, new_template):

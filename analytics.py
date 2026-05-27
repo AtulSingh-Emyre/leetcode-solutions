@@ -1,103 +1,159 @@
 import os
+import re
+import time
+from datetime import datetime, timedelta
 
-import requests
-from datetime import datetime
+# --- CONFIGURATION ---
+USERNAME = "Emyre"
+REPO_NAME = "leetcode-solutions"
+# ---------------------
 
-LEETCODE_USERNAME = "Emyre"
-GRAPHQL_URL = "https://leetcode.com"
-
-ANALYTICS_QUERY = """
-query userProfileUserQuestionProgressByDifficulty($username: String!) {
-    matchedUser(username: $username) {
-        submitStats {
-            acSubmissionNum { difficulty count }
-        }
-        tagProblemCounts {
-            advanced { tagName tagSlug problemsSolved }
-            intermediate { tagName tagSlug problemsSolved }
-            fundamental { tagName tagSlug problemsSolved }
-        }
-    }
-}
-"""
-
-def generate_visual_bar(percentage, length=20):
-    filled = int(round(length * (percentage / 100)))
-    return "█" * filled + "░" * (length - filled)
-
-def run_analytics_pipeline():
-    print("Executing authenticated native GraphQL analytics dashboard compiler...")
-    variables = {"username": LEETCODE_USERNAME}
+def parse_local_repo():
+    """Scans LeetHub folders to extract solved dates, difficulties, and tags."""
+    solved_problems = []
+    current_dir = os.getcwd()
     
-    csrf_token = os.environ.get("LEETCODE_CSRF", "")
-    session_token = os.environ.get("LEETCODE_SESSION", "")
+    # Regex to match LeetHub folder convention: e.g., "0001-two-sum"
+    leethub_folder_pattern = re.compile(r"^\d{4}-")
     
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Content-Type": "application/json",
-        "Referer": f"https://leetcode.com{LEETCODE_USERNAME}/",
-        "Origin": "https://leetcode.com",
-        "X-CSRFToken": csrf_token,
-        "Cookie": f"csrftoken={csrf_token}; LEETCODE_SESSION={session_token};"
+    for folder in os.listdir(current_dir):
+        if os.path.isdir(folder) and leethub_folder_pattern.match(folder):
+            readme_path = os.path.join(folder, "README.md")
+            if not os.path.exists(readme_path):
+                continue
+                
+            with open(readme_path, "r", encoding="utf-8") as f:
+                content = f.read()
+            
+            # Extract basic info from the markdown LeetHub creates
+            difficulty = "Easy"
+            if "Medium" in content: difficulty = "Medium"
+            elif "Hard" in content: difficulty = "Hard"
+            
+            # Get the exact time the solution file was created/last updated by LeetHub
+            # To fall back if Git timestamps aren't present locally
+            stat = os.stat(readme_path)
+            solved_date = datetime.fromtimestamp(stat.st_mtime)
+            
+            # Simple keyword matching to infer topics from LeetHub's problem text
+            topics = []
+            content_lower = content.lower()
+            keywords = {
+                "Array": ["array", "vector"], "String": ["string", "char"],
+                "Dynamic Programming": ["dynamic programming", "dp"],
+                "Tree": ["tree", "binary tree", "bst", "node"],
+                "Graph": ["graph", "dfs", "bfs", "matrix"],
+                "Hash Table": ["hash table", "hash map", "dictionary"],
+                "Two Pointers": ["two pointers", "sliding window"],
+                "Sorting": ["sort", "sorting"]
+            }
+            for topic, keys in keywords.items():
+                if any(k in content_lower for k in keys):
+                    topics.append(topic)
+            if not topics:
+                topics.append("General")
+                
+            clean_title = folder.split("-", 1)[1].replace("-", " ").title()
+            
+            solved_problems.append({
+                "title": clean_title,
+                "folder": folder,
+                "difficulty": difficulty,
+                "date": solved_date,
+                "topics": topics
+            })
+            
+    return solved_problems
+
+def generate_analytics(problems):
+    now = datetime.now()
+    week_ago = now - timedelta(days=7)
+    month_ago = now - timedelta(days=30)
+    
+    stats = {
+        "total": len(problems), "easy": 0, "medium": 0, "hard": 0,
+        "week_count": 0, "month_count": 0,
+        "week_topics": {}, "month_topics": {}
     }
-    try:
-        resp = requests.post(GRAPHQL_URL, json={"query": ANALYTICS_QUERY, "variables": variables}, headers=headers, timeout=15)
-        if resp.status_code != 200:
-            print(f"GraphQL Query blocked by server dashboard context. Status: {resp.status_code}")
-            return
+    
+    for p in problems:
+        # Global counts
+        if p["difficulty"] == "Easy": stats["easy"] += 1
+        elif p["difficulty"] == "Medium": stats["medium"] += 1
+        elif p["difficulty"] == "Hard": stats["hard"] += 1
         
-        data = resp.json().get('data', {}).get('matchedUser', {})
-        # ... Remaining analytical breakdown rendering matrix steps proceed below unchanged
-        
-        resp = requests.post(GRAPHQL_URL, json={"query": ANALYTICS_QUERY, "variables": variables}, headers=headers, timeout=15)
-        if resp.status_code != 200:
-            print(f"GraphQL Query blocked by server dashboard context. Status: {resp.status_code}")
-            return
-        
-        data = resp.json().get('data', {}).get('matchedUser', {})
-        if not data:
-            print("Profile payload execution resolved to an empty container.")
-            return
+        # Weekly Analytics
+        if p["date"] >= week_ago:
+            stats["week_count"] += 1
+            for t in p["topics"]:
+                stats["week_topics"][t] = stats["week_topics"].get(t, 0) + 1
+                
+        # Monthly Analytics
+        if p["date"] >= month_ago:
+            stats["month_count"] += 1
+            for t in p["topics"]:
+                stats["month_topics"][t] = stats["month_topics"].get(t, 0) + 1
+                
+    return stats
 
-        stats = data['submitStats']['acSubmissionNum']
-        solved_map = {item['difficulty']: item['count'] for item in stats}
-        total_solved = solved_map.get('All', 0)
-        
-        tags = data['tagProblemCounts']
-        all_tags = tags['advanced'] + tags['intermediate'] + tags['fundamental']
-        sorted_tags = sorted(all_tags, key=lambda x: x['problemsSolved'], reverse=True)[:10]
+def write_readme(stats, problems):
+    # Sort recent problems to show on the dashboard
+    problems.sort(key=lambda x: x["date"], reverse=True)
+    recent_rows = ""
+    for p in problems[:5]:
+        date_str = p["date"].strftime("%b %d, %Y")
+        diff_badge = f"🔴 {p['difficulty']}" if p['difficulty'] == "Hard" else (f"🟡 {p['difficulty']}" if p['difficulty'] == "Medium" else f"🟢 {p['difficulty']}")
+        recent_rows += f"| {date_str} | [{p['title']}](./{p['folder']}) | {diff_badge} | {', '.join(p['topics'])} |\n"
 
-        now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        md = f"""# 📊 Algorithmic Metrics & Progress Dashboard
-*Last automated sync: {now_str}*
+    # Convert topic dicts to formatted markdown fragments
+    def dict_to_md_list(d):
+        if not d: return "None recorded yet."
+        sorted_d = sorted(d.items(), key=lambda x: x[1], reverse=True)
+        return " ".join([f"`{topic} ({count})`" for topic, count in sorted_d])
 
-## 📈 High-Level Vitals
-- **Total Solved Problems:** {total_solved}
-- **LeetCode Target Rank:** Top 1% Global Tier (Peak Rating: 2009 / Knight Badge)
+    readme_content = f"""# 💻 LeetCode Engineering Portfolio
 
-### 🎯 Difficulty Distribution
+Welcome! This repository hosts my validated algorithmic solutions, automatically synced via LeetHub 2.0 and processed by an autonomous analytics dashboard workflow. It showcases my data structure expertise, consistency, and clean code optimization.
+
+---
+
+## 📊 Core Performance Metrics
+
+
+| Metric | Overview Progress Summary |
+| :--- | :--- |
+| **Total Solved** | **{stats['total']}** problems completed |
+| **Difficulty Mix** | 🟢 Easy: `{stats['easy']}` \| 🟡 Medium: `{stats['medium']}` \| 🔴 Hard: `{stats['hard']}` |
+| **Weekly Velocity** | `{stats['week_count']}` problems solved in the last 7 days |
+| **Monthly Velocity** | `{stats['month_count']}` problems solved in the last 30 days |
+
+---
+
+## ⏱️ Time-Frame Analytics (Recruiter Dashboard)
+
+### 📅 Past 7 Days (Velocity: {stats['week_count']} Problems)
+* **Core Topics Mastered This Week:** {dict_to_md_list(stats['week_topics'])}
+
+### 📅 Past 30 Days (Velocity: {stats['month_count']} Problems)
+* **Core Topics Mastered This Month:** {dict_to_md_list(stats['month_topics'])}
+
+---
+
+## 🕒 Recent Submissions Activity Log
+
+
+| Date | Problem Title | Difficulty | Core Concept Tags |
+| :--- | :--- | :--- | :--- |
+{recent_rows}
+
+---
+*Dashboard metrics updated automatically by GitHub Actions workflow container panel.*
 """
-        for diff in ['Easy', 'Medium', 'Hard']:
-            count = solved_map.get(diff, 0)
-            pct = (count / total_solved * 100) if total_solved > 0 else 0
-            bar = generate_visual_bar(pct)
-            md += f"- **{diff}:** {count} solutions ({pct:.1f}%) | `{bar}`\n"
-
-        md += "\n## 🏷️ Top 10 Problem-Solving Topic Allocations\n"
-        md += "| Topic Category | Problems Resolved | Depth Graph |\n| :--- | :---: | :--- |\n"
-        
-        max_tag_solved = sorted_tags['problemsSolved'] if sorted_tags else 1
-        for t in sorted_tags:
-            t_count = t['problemsSolved']
-            depth_pct = (t_count / max_tag_solved * 100)
-            depth_bar = generate_visual_bar(depth_pct, length=10)
-            md += f"| **{t['tagName']}** | {t_count} | `{depth_bar}` |\n"
-
-        with open("analytics.md", "w", encoding="utf-8") as f:
-            f.write(md)
-        print("Successfully compiled and output native analytics.md file.")
-    except Exception as e:
-        print(f"Error compiling analytics dashboard dashboard: {e}")
+    with open("README.md", "w", encoding="utf-8") as f:
+        f.write(readme_content)
+    print("✔ README.md successfully updated with latest analytics.")
 
 if __name__ == "__main__":
-    run_analytics_pipeline()
+    problems_list = parse_local_repo()
+    metrics = generate_analytics(problems_list)
+    write_readme(metrics, problems_list)

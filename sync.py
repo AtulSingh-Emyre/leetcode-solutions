@@ -48,7 +48,7 @@ def fetch_recent_submissions(csrf_token, session_token):
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "Content-Type": "application/json",
-        "Referer": f"https://leetcode.com{LEETCODE_USERNAME}/",
+        "Referer": f"https://leetcode.com/u/{LEETCODE_USERNAME}/",
         "Origin": "https://leetcode.com",
         "X-CSRFToken": csrf_token,
         "Cookie": f"csrftoken={csrf_token}; LEETCODE_SESSION={session_token};"

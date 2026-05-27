@@ -4,10 +4,10 @@ import requests
 import difflib
 from datetime import datetime
 
-# Profile Settings
 LEETCODE_USERNAME = "Emyre"
 GRAPHQL_URL = "https://leetcode.com"
 
+# Pure GraphQL query to target recent accepted submissions
 QUERY = """
 query recentAcSubmissions($username: String!, $limit: Int!) {
     recentAcSubmissions(username: $username, limit: $limit) {
@@ -25,33 +25,41 @@ LANGUAGE_CONFIGS = {
     "python3": {"ext": ".py", "comment": "#", "template": "class Solution:\n    def solve(self):\n        pass\n"},
     "java": {"ext": ".java", "comment": "//", "template": "class Solution {\n    // Implementation\n}\n"},
     "cpp": {"ext": ".cpp", "comment": "//", "template": "class Solution {\npublic:\n    // Implementation\n};\n"},
-    "javascript": {"ext": ".js", "comment": "//", "template": var solve = function() {\n};\n"},
+    "javascript": {"ext": ".js", "comment": "//", "template": "var solve = function() {\n};\n"},
     "typescript": {"ext": ".ts", "comment": "//", "template": "function solve(): void {}\n"},
     "kotlin": {"ext": ".kt", "comment": "//", "template": "class Solution {}\n"}
 }
 
 def fetch_recent_submissions():
     variables = {"username": LEETCODE_USERNAME, "limit": 20}
+    # Real-world browser impersonation headers to pass GitHub cloud runtime actions cleanly
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Content-Type": "application/json",
+        "Referer": f"https://leetcode.com/{LEETCODE_USERNAME}/",
+        "Origin": "https://leetcode.com"
+    }
     try:
-        response = requests.post(GRAPHQL_URL, json={"query": QUERY, "variables": variables})
+        response = requests.post(GRAPHQL_URL, json={"query": QUERY, "variables": variables}, headers=headers, timeout=15)
         if response.status_code == 200:
             return response.json().get('data', {}).get('recentAcSubmissions', [])
+        else:
+            print(f"GraphQL Query blocked by server firewall. Status: {response.status_code}")
     except Exception as e:
-        print(f"API Error: {e}")
+        print(f"Connection Error: {e}")
     return []
 
 def calculate_similarity(old_file_path, new_template):
-    """Calculates text variance against current file state."""
     try:
         with open(old_file_path, 'r', encoding='utf-8') as f:
             old_content = f.read()
-        # Using SequenceMatcher to gauge variance string limits
         matcher = difflib.SequenceMatcher(None, old_content, new_template)
+        print(f"Comparing with existing file: {old_file_path} - Similarity: {matcher.ratio():.2f}")
         return matcher.ratio()
     except Exception:
         return 0.0
 
-def run_versioned_sync():
+def run_sync_pipeline():
     submissions = fetch_recent_submissions()
     if not submissions:
         print("No recent data fetched.")
@@ -63,7 +71,9 @@ def run_versioned_sync():
 
     for sub in submissions:
         sub_time = int(sub['timestamp'])
+        print(f"Processing submission: {sub['title']} at {datetime.fromtimestamp(sub_time).strftime('%Y-%m-%d %H:%M:%S')}")
         
+        # Validates submissions completed within a rolling 24-hour cloud window
         if sub_time >= one_day_ago:
             problem_slug = sub['titleSlug']
             problem_title = sub['title']
@@ -77,46 +87,40 @@ def run_versioned_sync():
             comment_tag = lang_setup['comment']
             ext = lang_setup['ext']
             
-            # Base text block initialization 
             file_body = f"{comment_tag} LeetCode Problem Title: {problem_title}\n"
             file_body += f"{comment_tag} Language: {sub['lang']}\n"
-            file_body += f"{comment_tag} Reference: https://leetcode.com{problem_slug}/\n"
-            file_body += f"{comment_tag} Synced: {date_display}\n\n"
+            file_body += f"{comment_tag} Reference URL: https://leetcode.com{problem_slug}/\n"
+            file_body += f"{comment_tag} Synced Timestamp: {date_display}\n\n"
             file_body += lang_setup['template']
             
-            # Check for existing records matching this specific language extension
             existing_files = [f for f in os.listdir(problem_slug) if f.endswith(ext)]
-            
             should_write = False
             target_filename = f"Solution{ext}"
             
             if not existing_files:
-                # Scenario A: First time solving this problem in this programming language
                 should_write = True
                 target_filename = f"Solution{ext}"
             else:
-                # Scenario B: Language exists. Check for codebase similarity updates
-                # Target the latest historical version in that directory
                 latest_existing_file = sorted(existing_files)[-1]
                 full_old_path = os.path.join(problem_slug, latest_existing_file)
-                
                 similarity_score = calculate_similarity(full_old_path, file_body)
                 
-                # If variance is greater than 15% (similarity < 85%), trigger new version layout
                 if similarity_score < 0.85:
+                    print(f"New unique solution detected for {problem_title} ({similarity_score:.2f} similarity).")
                     should_write = True
                     target_filename = f"Solution_{formatted_date}{ext}"
-                    print(f"Optimization detected for {problem_title} ({similarity_score:.2f} similarity). Saving version layer.")
+                    print(f"Optimization detected for {problem_title} ({similarity_score:.2f} similarity).")
             
             if should_write:
+                print(f"Saving new solution block for: {problem_title} at {date_display}")
                 final_path = os.path.join(problem_slug, target_filename)
                 with open(final_path, "w", encoding="utf-8") as f:
                     f.write(file_body)
-                print(f"Published solution tracking module: {final_path}")
+                print(f"Saved solution block: {final_path}")
                 synced_any = True
 
     if not synced_any:
-        print("No new problems or unique optimization profiles detected today.")
+        print("No new unique code submissions found in the past 24 hours.")
 
 if __name__ == "__main__":
-    run_versioned_sync()
+    run_sync_pipeline()

@@ -1,4 +1,3 @@
-import json
 import requests
 from datetime import datetime
 
@@ -25,16 +24,23 @@ def generate_visual_bar(percentage, length=20):
     return "█" * filled + "░" * (length - filled)
 
 def run_analytics_pipeline():
-    print("Executing standalone analytics engine pipeline...")
+    print("Executing native GraphQL analytics dashboard compiler...")
     variables = {"username": LEETCODE_USERNAME}
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Content-Type": "application/json",
+        "Referer": f"https://leetcode.com/{LEETCODE_USERNAME}/",
+        "Origin": "https://leetcode.com"
+    }
     try:
-        resp = requests.post(GRAPHQL_URL, json={"query": ANALYTICS_QUERY, "variables": variables})
+        resp = requests.post(GRAPHQL_URL, json={"query": ANALYTICS_QUERY, "variables": variables}, headers=headers, timeout=15)
         if resp.status_code != 200:
-            print("Failed to contact API gateway.")
+            print(f"GraphQL Query blocked by server dashboard context. Status: {resp.status_code}")
             return
+        
         data = resp.json().get('data', {}).get('matchedUser', {})
         if not data:
-            print("Empty payload received.")
+            print("Profile payload execution resolved to an empty container.")
             return
 
         stats = data['submitStats']['acSubmissionNum']
@@ -73,9 +79,9 @@ def run_analytics_pipeline():
 
         with open("analytics.md", "w", encoding="utf-8") as f:
             f.write(md)
-        print("Successfully rendered clean analytics.md dashboard panel.")
+        print("Successfully compiled and output native analytics.md file.")
     except Exception as e:
-        print(f"Error handling dashboard update: {e}")
+        print(f"Error compiling analytics dashboard dashboard: {e}")
 
 if __name__ == "__main__":
     run_analytics_pipeline()

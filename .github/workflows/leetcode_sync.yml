@@ -1,5 +1,8 @@
 name: Automated Daily LeetCode Sync
 
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: '0 18 * * *'  # Executes daily at 11:30 PM IST

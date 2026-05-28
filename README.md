@@ -20,10 +20,10 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 ## ⏱️ Time-Frame Analytics (Recruiter Dashboard)
 
 ### 📅 Past 7 Days (Velocity: 3 Problems)
-* **Core Topics Mastered This Week:** `Bit Manipulation (3)` `String (3)` `Dynamic Programming (2)` `Trie (1)` `Array (1)`
+* **Core Topics Mastered This Week:** `Bit Manipulation (3)` `Trie (1)`
 
 ### 📅 Past 30 Days (Velocity: 3 Problems)
-* **Core Topics Mastered This Month:** `Bit Manipulation (3)` `String (3)` `Dynamic Programming (2)` `Trie (1)` `Array (1)`
+* **Core Topics Mastered This Month:** `Bit Manipulation (3)` `Trie (1)`
 
 ---
 
@@ -33,9 +33,9 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 
 | Date | Problem Title | Difficulty | Core Concept Tags |
 | :--- | :--- | :--- | :--- |
-| May 28, 2026 | [Count The Number Of Special Characters I](./3120-count-the-number-of-special-characters-i) | 🟢 Easy | Dynamic Programming, Bit Manipulation, String |
-| May 28, 2026 | [Longest Common Suffix Queries](./3093-longest-common-suffix-queries) | 🔴 Hard | Trie, Dynamic Programming, Bit Manipulation, String, Array |
-| May 28, 2026 | [Jump Game Vii](./1871-jump-game-vii) | 🟡 Medium | Bit Manipulation, String |
+| May 28, 2026 | [Count The Number Of Special Characters I](./3120-count-the-number-of-special-characters-i) | 🟢 Easy | Bit Manipulation |
+| May 28, 2026 | [Longest Common Suffix Queries](./3093-longest-common-suffix-queries) | 🔴 Hard | Trie, Bit Manipulation |
+| May 28, 2026 | [Jump Game Vii](./1871-jump-game-vii) | 🟡 Medium | Bit Manipulation |
 
 
 ---

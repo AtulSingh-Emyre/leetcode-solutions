@@ -141,11 +141,11 @@ def write_readme(stats, problems):
         
         # --- DYNAMIC DIFFICULTY BADGES ---
         if p['difficulty'] == "Hard":
-            diff_badge = '<img src="https://shields.io🔴%20🔥-red?style=flat-square" alt="Hard">'
+            diff_badge = '<img src="https://img.shields.io/badge/Hard-🔴%20🔥-red?style=flat-square" alt="Hard">'
         elif p['difficulty'] == "Medium":
-            diff_badge = '<img src="https://shields.io🟡%20⚡-yellow?style=flat-square" alt="Medium">'
+            diff_badge = '<img src="https://img.shields.io/badge/Medium-🟡%20⚡-yellow?style=flat-square" alt="Medium">'
         else:
-            diff_badge = '<img src="https://shields.io🟢%20🌱-green?style=flat-square" alt="Easy">'
+            diff_badge = '<img src="https://img.shields.io/badge/Easy-🟢%20🌱-green?style=flat-square" alt="Easy">'
             
         # --- HTML TAG CLOUD FOR CORE CONCEPTS ---
         tag_badges = []
@@ -174,17 +174,18 @@ def write_readme(stats, problems):
     safe_hard_lbl = clean_label(f"Hard ({hard_pct}%)")
     safe_week_vel = clean_label(f"{stats['week_count']} problems / wk")
     safe_month_vel = clean_label(f"{stats['month_count']} problems / mo")
+    safe_total = clean_label(f"{stats['total']}")
 
     readme_content = f"""# 💻 LeetCode Engineering Portfolio
 
-Welcome! This repository hosts my validated algorithmic solutions, automatically synced via LeetHub 2.0 and processed by an autonomous analytics dashboard workflow. It showcases my data structure expertise, consistency, and clean code optimization.
+Welcome! This repository hosts my validated algorithmic solutions, automatically synced via LeetHub 2.0 and processed by an autonomous analytics dashboard workflow. It showcases my data structure expertise and problem-solving capabilities.
 
 ---
 
 ## 📊 Core Performance Metrics
 
 <p align="left">
-  <img src="https://shields.io{stats['total']}-7A1FA2?style=for-the-badge&logo=leetcode" alt="Total Solved">
+  <img src="https://img.shields.io/badge/Total%20Solved-{safe_total}-7A1FA2?style=for-the-badge&logo=leetcode" alt="Total Solved">
   <img src="https://img.shields.io/badge/{safe_easy_lbl}-{stats['easy']}-2E7D32?style=for-the-badge" alt="Easy Progress">
   <img src="https://img.shields.io/badge/{safe_med_lbl}-{stats['medium']}-F57C00?style=for-the-badge" alt="Medium Progress">
   <img src="https://img.shields.io/badge/{safe_hard_lbl}-{stats['hard']}-C62828?style=for-the-badge" alt="Hard Progress">
@@ -193,8 +194,8 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 
 | Metric | Overview Progress Summary |
 | :--- | :--- |
-| **Weekly Velocity** | <img src="https://shields.io{safe_week_vel}-blue?style=flat-square" alt="Weekly Velocity"> |
-| **Monthly Velocity** | <img src="https://shields.io{safe_month_vel}-blue?style=flat-square" alt="Monthly Velocity"> |
+| **Weekly Velocity** | <img src="https://img.shields.io/badge/{safe_week_vel}-blue?style=flat-square" alt="Weekly Velocity"> |
+| **Monthly Velocity** | <img src="https://img.shields.io/badge/{safe_month_vel}-blue?style=flat-square" alt="Monthly Velocity"> |
 
 ---
 
@@ -217,7 +218,7 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 
 ---
 <p align="center">
-  <img src="https://shields.io" alt="Workflow Status">
+  <img src="https://img.shields.io/badge/Last%20Updated-{datetime.now().strftime('%Y%m%d')}-blue" alt="Workflow Status">
 </p>
 """
     with open("README.md", "w", encoding="utf-8") as f:

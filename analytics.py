@@ -77,10 +77,30 @@ def parse_local_repo():
                 "Array": ["array", "vector", "matrix", "subarray", "grid"],
                 "Math": ["math", "geometry", "gcd", "lcm", "prime", "modulo", "combinatorics", "probability", "base-"]
             }
+                        # ... (Inside your parse_local_repo() loop, right after content_lower = content.lower()) ...
+
+            # 1. Classify which tags are considered "Noise/Basic"
+            basic_noise_tags = {"Array", "String", "Math"}
             
+            matched_topics = []
             for topic, keys in keywords.items():
-                if any(k in content_lower for k in keys):
-                    topics.append(topic)
+                for key in keys:
+                    # \b ensures we match standalone words/phrases only
+                    pattern = r'\b' + re.escape(key.lower()) + r'\b'
+                    if re.search(pattern, content_lower):
+                        matched_topics.append(topic)
+                        break  # Move to the next topic group
+            
+            # 2. Filtering Layer: Check if any advanced tag was found
+            has_advanced_tag = any(tag not in basic_noise_tags for tag in matched_topics)
+            
+            if has_advanced_tag:
+                # Keep only the advanced tags, dropping Array, String, and Math
+                topics = [tag for tag in matched_topics if tag not in basic_noise_tags]
+            else:
+                # If NO advanced tags were found, fallback to the basic tags found
+                topics = matched_topics
+
             if not topics:
                 topics.append("General")
                 

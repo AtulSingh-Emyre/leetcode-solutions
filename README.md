@@ -9,20 +9,20 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 
 | Metric | Overview Progress Summary |
 | :--- | :--- |
-| **Total Solved** | **2** problems completed |
-| **Difficulty Mix** | 🟢 Easy: `1` \| 🟡 Medium: `1` \| 🔴 Hard: `0` |
-| **Weekly Velocity** | `2` problems solved in the last 7 days |
-| **Monthly Velocity** | `2` problems solved in the last 30 days |
+| **Total Solved** | **3** problems completed |
+| **Difficulty Mix** | 🟢 Easy: `1` \| 🟡 Medium: `1` \| 🔴 Hard: `1` |
+| **Weekly Velocity** | `3` problems solved in the last 7 days |
+| **Monthly Velocity** | `3` problems solved in the last 30 days |
 
 ---
 
 ## ⏱️ Time-Frame Analytics (Recruiter Dashboard)
 
-### 📅 Past 7 Days (Velocity: 2 Problems)
-* **Core Topics Mastered This Week:** `String (2)`
+### 📅 Past 7 Days (Velocity: 3 Problems)
+* **Core Topics Mastered This Week:** `String (3)` `Array (1)`
 
-### 📅 Past 30 Days (Velocity: 2 Problems)
-* **Core Topics Mastered This Month:** `String (2)`
+### 📅 Past 30 Days (Velocity: 3 Problems)
+* **Core Topics Mastered This Month:** `String (3)` `Array (1)`
 
 ---
 
@@ -31,25 +31,10 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 
 | Date | Problem Title | Difficulty | Core Concept Tags |
 | :--- | :--- | :--- | :--- |
-| May 27, 2026 | [Count The Number Of Special Characters I](./3120-count-the-number-of-special-characters-i) | 🟢 Easy | String |
-| May 27, 2026 | [Jump Game Vii](./1871-jump-game-vii) | 🟡 Medium | String |
+| May 28, 2026 | [Count The Number Of Special Characters I](./3120-count-the-number-of-special-characters-i) | 🟢 Easy | String |
+| May 28, 2026 | [Longest Common Suffix Queries](./3093-longest-common-suffix-queries) | 🔴 Hard | Array, String |
+| May 28, 2026 | [Jump Game Vii](./1871-jump-game-vii) | 🟡 Medium | String |
 
 
 ---
 *Dashboard metrics updated automatically by GitHub Actions workflow container panel.*
-
-<!---LeetCode Topics Start-->
-# LeetCode Topics
-## Array
-|  |
-| ------- |
-| [3093-longest-common-suffix-queries](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3093-longest-common-suffix-queries) |
-## String
-|  |
-| ------- |
-| [3093-longest-common-suffix-queries](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3093-longest-common-suffix-queries) |
-## Trie
-|  |
-| ------- |
-| [3093-longest-common-suffix-queries](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3093-longest-common-suffix-queries) |
-<!---LeetCode Topics End-->

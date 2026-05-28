@@ -126,16 +126,39 @@ def write_readme(stats, problems):
     # Sort recent problems to show on the dashboard
     problems.sort(key=lambda x: x["date"], reverse=True)
     recent_rows = ""
+    
     for p in problems[:5]:
         date_str = p["date"].strftime("%b %d, %Y")
-        diff_badge = f"🔴 {p['difficulty']}" if p['difficulty'] == "Hard" else (f"🟡 {p['difficulty']}" if p['difficulty'] == "Medium" else f"🟢 {p['difficulty']}")
-        recent_rows += f"| {date_str} | [{p['title']}](./{p['folder']}) | {diff_badge} | {', '.join(p['topics'])} |\n"
+        
+        # --- DYNAMIC DIFFICULTY BADGES ---
+        if p['difficulty'] == "Hard":
+            diff_badge = '<img src="https://shields.io🔴%20🔥-red?style=flat-square" alt="Hard">'
+        elif p['difficulty'] == "Medium":
+            diff_badge = '<img src="https://shields.io🟡%20⚡-yellow?style=flat-square" alt="Medium">'
+        else:
+            diff_badge = '<img src="https://shields.io🟢%20🌱-green?style=flat-square" alt="Easy">'
+            
+        # --- HTML TAG CLOUD FOR CORE CONCEPTS ---
+        tag_badges = []
+        for tag in p['topics']:
+            # Safe URL encoding for tags containing spaces or slashes
+            safe_tag = tag.replace(" ", "%20").replace("/", "%2F")
+            tag_badges.append(f'<img src="https://shields.io{safe_tag}-blue?style=flat-square" alt="{tag}">')
+        tag_str = " ".join(tag_badges)
+        
+        recent_rows += f"| {date_str} | [{p['title']}](./{p['folder']}) | {diff_badge} | {tag_str} |\n"
 
     # Convert topic dicts to formatted markdown fragments
     def dict_to_md_list(d):
         if not d: return "None recorded yet."
         sorted_d = sorted(d.items(), key=lambda x: x[1], reverse=True)
-        return " ".join([f"`{topic} ({count})`" for topic, count in sorted_d])
+        return " ".join([f"📈 `{topic} ({count})`" for topic, count in sorted_d])
+
+    # --- PROGRESS CALCULATION FOR SHIELD BARS ---
+    total = stats['total'] if stats['total'] > 0 else 1
+    easy_pct = round((stats['easy'] / total) * 100)
+    med_pct = round((stats['medium'] / total) * 100)
+    hard_pct = round((stats['hard'] / total) * 100)
 
     readme_content = f"""# 💻 LeetCode Engineering Portfolio
 
@@ -145,13 +168,18 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 
 ## 📊 Core Performance Metrics
 
+<p align="left">
+  <img src="https://shields.ioTotal%20Solved-{stats['total']}-7A1FA2?style=for-the-badge&logo=leetcode" alt="Total Solved">
+  <img src="https://shields.ioEasy%20({easy_pct}%25)-{stats['easy']}-2E7D32?style=for-the-badge" alt="Easy Progress">
+  <img src="https://shields.ioMedium%20({med_pct}%25)-{stats['medium']}-F57C00?style=for-the-badge" alt="Medium Progress">
+  <img src="https://shields.ioHard%20({hard_pct}%25)-{stats['hard']}-C62828?style=for-the-badge" alt="Hard Progress">
+</p>
+
 
 | Metric | Overview Progress Summary |
 | :--- | :--- |
-| **Total Solved** | **{stats['total']}** problems completed |
-| **Difficulty Mix** | 🟢 Easy: `{stats['easy']}` \| 🟡 Medium: `{stats['medium']}` \| 🔴 Hard: `{stats['hard']}` |
-| **Weekly Velocity** | `{stats['week_count']}` problems solved in the last 7 days |
-| **Monthly Velocity** | `{stats['month_count']}` problems solved in the last 30 days |
+| **Weekly Velocity** | <img src="https://shields.ioVelocity-{stats['week_count']}%20problems%20/%20wk-blue?style=flat-square" alt="Weekly Velocity"> |
+| **Monthly Velocity** | <img src="https://shields.ioVelocity-{stats['month_count']}%20problems%20/%20mo-blue?style=flat-square" alt="Monthly Velocity"> |
 
 ---
 
@@ -173,11 +201,13 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 {recent_rows}
 
 ---
-*Dashboard metrics updated automatically by GitHub Actions workflow container panel.*
+<p align="center">
+  <img src="https://shields.ioDashboard%20Status-Automated%20via%20GitHub%20Actions-brightgreen?style=flat-square&logo=github-actions" alt="Workflow Status">
+</p>
 """
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(readme_content)
-    print("✔ README.md successfully updated with latest analytics.")
+    print("✔ README.md successfully updated with high-end Shields.io badges.")
 
 if __name__ == "__main__":
     problems_list = parse_local_repo()

@@ -131,9 +131,9 @@ def write_readme(stats, problems):
     def clean_label(text):
         text = str(text)
         text = text.replace("-", "--")      # Shields.io format for literal dash
+        text = text.replace("%", "%25")     # URL encode percent sign
         text = text.replace(" ", "%20")     # URL encode space
         text = text.replace("/", "%2F")     # URL encode slash
-        text = text.replace("%", "%25")     # URL encode percent sign
         return text
     
     for p in problems[:5]:
@@ -141,11 +141,11 @@ def write_readme(stats, problems):
         
         # --- DYNAMIC DIFFICULTY BADGES ---
         if p['difficulty'] == "Hard":
-            diff_badge = '<img src="https://img.shields.io/badge/Hard-🔴%20🔥-red?style=flat-square" alt="Hard">'
+            diff_badge = '<img src="https://img.shields.io/badge/Hard-🔴-red?style=flat-square" alt="Hard">'
         elif p['difficulty'] == "Medium":
-            diff_badge = '<img src="https://img.shields.io/badge/Medium-🟡%20⚡-yellow?style=flat-square" alt="Medium">'
+            diff_badge = '<img src="https://img.shields.io/badge/Medium-🟡-yellow?style=flat-square" alt="Medium">'
         else:
-            diff_badge = '<img src="https://img.shields.io/badge/Easy-🟢%20🌱-green?style=flat-square" alt="Easy">'
+            diff_badge = '<img src="https://img.shields.io/badge/Easy-🟢-green?style=flat-square" alt="Easy">'
             
         # --- HTML TAG CLOUD FOR CORE CONCEPTS ---
         tag_badges = []

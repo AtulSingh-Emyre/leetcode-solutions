@@ -37,3 +37,19 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 
 ---
 *Dashboard metrics updated automatically by GitHub Actions workflow container panel.*
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [3093-longest-common-suffix-queries](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3093-longest-common-suffix-queries) |
+## String
+|  |
+| ------- |
+| [3093-longest-common-suffix-queries](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3093-longest-common-suffix-queries) |
+## Trie
+|  |
+| ------- |
+| [3093-longest-common-suffix-queries](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3093-longest-common-suffix-queries) |
+<!---LeetCode Topics End-->

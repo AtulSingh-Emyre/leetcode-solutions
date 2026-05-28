@@ -40,29 +40,42 @@ def parse_local_repo():
             content_lower = content.lower()
             
             # EXTENDED KEYWORDS: Added complex data structures and algorithms
-            keywords = {
+                        keywords = {
+                # --- Advanced Data Structures ---
+                "Trie": ["trie", "prefix tree", "suffix tree", "suffix query", "suffix queries"],
+                "Segment Tree / Fenwick": ["segment tree", "fenwick tree", "binary indexed tree", "bit", "range query"],
+                "Union Find (DSU)": ["union find", "dsu", "disjoint set", "connected component"],
+                "Heap / Priority Queue": ["heap", "priority queue", "pq", "min-heap", "max-heap"],
+                "Monotonic Stack / Queue": ["monotonic stack", "monotonic queue", "next greater element"],
+                "Graph": ["graph", "dfs", "bfs", "matrix", "topological", "dijkstra", "mst", "kruskal", "prim", "shortest path"],
+                "Tree": ["tree", "binary tree", "bst", "node", "lowest common ancestor", "lca", "subtree"],
+                
+                # --- NEW: Linear Data Structures ---
+                "Linked List": ["linked list", "listnode", "singly linked", "doubly linked", "dummy node"],
+                
+                # --- Advanced Algorithmic Paradigms ---
+                "Dynamic Programming": ["dynamic programming", "dp", "memoization", "tabulation", "knapsack", "lcs", "lis", "kadane"],
+                "Recursion / Backtracking": ["backtracking", "recursion", "permutations", "combinations", "subset"],
+                "Divide and Conquer": ["divide and conquer", "merge sort", "quick sort"],
+                "Greedy": ["greedy", "interval", "huffman"],
+                
+                # --- Intermediate Patterns ---
+                "Sliding Window": ["sliding window", "longest substring without repeating"],
+                "Two Pointers": ["two pointers", "two-pointer", "slow fast pointer", "meeting rooms"],
+                "Binary Search": ["binary search", "bisect", "search in rotated"],
+                "Bit Manipulation": ["bit manipulation", "bitwise", "xor", "and", "or", "shift"],
+                
+                # --- NEW: Structural Patterns ---
+                "Prefix Sum": ["prefix sum", "suffix sum", "running sum", "cumulative sum"],
+                "Design": ["lru cache", "lfu cache", "design", "oops", "system design", "instantiate", "iterator"],
+                "Simulation": ["simulation", "simulate", "robot", "game of life"],
+                
                 # --- Basic Concepts ---
-                "Array": ["array", "vector"], 
-                "String": ["string", "char"],
-                "Hash Table": ["hash table", "hash map", "dictionary", "hashset"],
-                "Sorting": ["sort", "sorting"],
-                
-                # --- Intermediate Concepts ---
-                "Two Pointers": ["two pointers", "two-pointer"],
-                "Sliding Window": ["sliding window"],
-                "Stack": ["stack", "monotonic stack"],
-                "Queue": ["queue", "deque", "bfs"],
-                "Heap / Priority Queue": ["heap", "priority queue", "pq"],
-                
-                # --- Advanced & Complex Concepts ---
-                "Trie": ["trie", "prefix tree"],
-                "Dynamic Programming": ["dynamic programming", "dp", "memoization"],
-                "Tree": ["tree", "binary tree", "bst", "node"],
-                "Graph": ["graph", "dfs", "matrix", "topological"],
-                "Union Find (DSU)": ["union find", "dsu", "disjoint set"],
-                "Bit Manipulation": ["bit manipulation", "bitwise", "xor"],
-                "Segment Tree / Fenwick": ["segment tree", "fenwick tree", "binary indexed tree", "bit"],
-                "Recursion / Backtracking": ["backtracking", "recursion"]
+                "Hash Table": ["hash table", "hash map", "dictionary", "hashset", "counter", "frequency map"],
+                "Sorting": ["sort", "sorting", "sorted"],
+                "String": ["string", "char", "substring", "palindrome", "anagram"],
+                "Array": ["array", "vector", "matrix", "subarray", "grid"],
+                "Math": ["math", "geometry", "gcd", "lcm", "prime", "modulo", "combinatorics", "probability", "base-"]
             }
             
             for topic, keys in keywords.items():

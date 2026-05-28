@@ -38,15 +38,33 @@ def parse_local_repo():
             # Simple keyword matching to infer topics from LeetHub's problem text
             topics = []
             content_lower = content.lower()
+            
+            # EXTENDED KEYWORDS: Added complex data structures and algorithms
             keywords = {
-                "Array": ["array", "vector"], "String": ["string", "char"],
-                "Dynamic Programming": ["dynamic programming", "dp"],
+                # --- Basic Concepts ---
+                "Array": ["array", "vector"], 
+                "String": ["string", "char"],
+                "Hash Table": ["hash table", "hash map", "dictionary", "hashset"],
+                "Sorting": ["sort", "sorting"],
+                
+                # --- Intermediate Concepts ---
+                "Two Pointers": ["two pointers", "two-pointer"],
+                "Sliding Window": ["sliding window"],
+                "Stack": ["stack", "monotonic stack"],
+                "Queue": ["queue", "deque", "bfs"],
+                "Heap / Priority Queue": ["heap", "priority queue", "pq"],
+                
+                # --- Advanced & Complex Concepts ---
+                "Trie": ["trie", "prefix tree"],
+                "Dynamic Programming": ["dynamic programming", "dp", "memoization"],
                 "Tree": ["tree", "binary tree", "bst", "node"],
-                "Graph": ["graph", "dfs", "bfs", "matrix"],
-                "Hash Table": ["hash table", "hash map", "dictionary"],
-                "Two Pointers": ["two pointers", "sliding window"],
-                "Sorting": ["sort", "sorting"]
+                "Graph": ["graph", "dfs", "matrix", "topological"],
+                "Union Find (DSU)": ["union find", "dsu", "disjoint set"],
+                "Bit Manipulation": ["bit manipulation", "bitwise", "xor"],
+                "Segment Tree / Fenwick": ["segment tree", "fenwick tree", "binary indexed tree", "bit"],
+                "Recursion / Backtracking": ["backtracking", "recursion"]
             }
+            
             for topic, keys in keywords.items():
                 if any(k in content_lower for k in keys):
                     topics.append(topic)
@@ -120,6 +138,7 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 ## 📊 Core Performance Metrics
 
 
+
 | Metric | Overview Progress Summary |
 | :--- | :--- |
 | **Total Solved** | **{stats['total']}** problems completed |
@@ -140,6 +159,7 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 ---
 
 ## 🕒 Recent Submissions Activity Log
+
 
 
 | Date | Problem Title | Difficulty | Core Concept Tags |

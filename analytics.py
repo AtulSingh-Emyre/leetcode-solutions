@@ -40,7 +40,7 @@ def parse_local_repo():
             content_lower = content.lower()
             
             # EXTENDED KEYWORDS: Added complex data structures and algorithms
-                        keywords = {
+            keywords = {
                 # --- Advanced Data Structures ---
                 "Trie": ["trie", "prefix tree", "suffix tree", "suffix query", "suffix queries"],
                 "Segment Tree / Fenwick": ["segment tree", "fenwick tree", "binary indexed tree", "bit", "range query"],

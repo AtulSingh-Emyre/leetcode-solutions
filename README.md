@@ -1,6 +1,6 @@
 # 💻 LeetCode Engineering Portfolio
 
-Welcome! This repository hosts my validated algorithmic solutions, automatically synced via LeetHub 2.0 and processed by an autonomous analytics dashboard workflow. It showcases my data structure expertise and problem-solving capabilities.
+Welcome! This repository hosts my validated algorithmic solutions, automatically synced via LeetHub 2.0 and processed by an autonomous analytics dashboard workflow. It showcases my data structure expe[...]
 
 ---
 
@@ -8,16 +8,16 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 
 <p align="left">
   <img src="https://img.shields.io/badge/Total%20Solved-3-7A1FA2?style=for-the-badge&logo=leetcode" alt="Total Solved">
-  <img src="https://img.shields.io/badge/Easy%2520(33%25)-1-2E7D32?style=for-the-badge" alt="Easy Progress">
-  <img src="https://img.shields.io/badge/Medium%2520(33%25)-1-F57C00?style=for-the-badge" alt="Medium Progress">
-  <img src="https://img.shields.io/badge/Hard%2520(33%25)-1-C62828?style=for-the-badge" alt="Hard Progress">
+  <img src="https://img.shields.io/badge/Easy%2520(33%25)-1-2E7D32?style=for-the-badge" alt="Easy (33%)">
+  <img src="https://img.shields.io/badge/Medium%2520(33%25)-1-F57C00?style=for-the-badge" alt="Medium (33%)">
+  <img src="https://img.shields.io/badge/Hard%2520(33%25)-1-C62828?style=for-the-badge" alt="Hard (33%)">
 </p>
 
 
 | Metric | Overview Progress Summary |
 | :--- | :--- |
-| **Weekly Velocity** | <img src="https://img.shields.io/badge/3%2520problems%2520%252F%2520wk-blue?style=flat-square" alt="Weekly Velocity"> |
-| **Monthly Velocity** | <img src="https://img.shields.io/badge/3%2520problems%2520%252F%2520mo-blue?style=flat-square" alt="Monthly Velocity"> |
+| **Weekly Velocity** | <img src="https://img.shields.io/badge/3%2520problems%2520%252F%2520wk-blue?style=flat-square" alt="3 problems / wk"> |
+| **Monthly Velocity** | <img src="https://img.shields.io/badge/3%2520problems%2520%252F%2520mo-blue?style=flat-square" alt="3 problems / mo"> |
 
 ---
 

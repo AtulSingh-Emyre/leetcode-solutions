@@ -168,7 +168,7 @@ def write_readme(stats, problems):
     med_pct = round((stats['medium'] / total) * 100)
     hard_pct = round((stats['hard'] / total) * 100)
 
-    # Sanitize the header badge values to prevent bad URLs
+    # Sanitize the header badge values to prevent bad URLs - don't encode for display text
     safe_easy_lbl = clean_label(f"Easy ({easy_pct}%)")
     safe_med_lbl = clean_label(f"Medium ({med_pct}%)")
     safe_hard_lbl = clean_label(f"Hard ({hard_pct}%)")
@@ -176,9 +176,16 @@ def write_readme(stats, problems):
     safe_month_vel = clean_label(f"{stats['month_count']} problems / mo")
     safe_total = clean_label(f"{stats['total']}")
 
+    # Create readable display versions without encoding
+    display_easy = f"Easy ({easy_pct}%)"
+    display_med = f"Medium ({med_pct}%)"
+    display_hard = f"Hard ({hard_pct}%)"
+    display_week_vel = f"{stats['week_count']} problems / wk"
+    display_month_vel = f"{stats['month_count']} problems / mo"
+
     readme_content = f"""# 💻 LeetCode Engineering Portfolio
 
-Welcome! This repository hosts my validated algorithmic solutions, automatically synced via LeetHub 2.0 and processed by an autonomous analytics dashboard workflow. It showcases my data structure expertise and problem-solving capabilities.
+Welcome! This repository hosts my validated algorithmic solutions, automatically synced via LeetHub 2.0 and processed by an autonomous analytics dashboard workflow. It showcases my data structure expe[...]
 
 ---
 
@@ -186,16 +193,16 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 
 <p align="left">
   <img src="https://img.shields.io/badge/Total%20Solved-{safe_total}-7A1FA2?style=for-the-badge&logo=leetcode" alt="Total Solved">
-  <img src="https://img.shields.io/badge/{safe_easy_lbl}-{stats['easy']}-2E7D32?style=for-the-badge" alt="Easy Progress">
-  <img src="https://img.shields.io/badge/{safe_med_lbl}-{stats['medium']}-F57C00?style=for-the-badge" alt="Medium Progress">
-  <img src="https://img.shields.io/badge/{safe_hard_lbl}-{stats['hard']}-C62828?style=for-the-badge" alt="Hard Progress">
+  <img src="https://img.shields.io/badge/{safe_easy_lbl}-{stats['easy']}-2E7D32?style=for-the-badge" alt="{display_easy}">
+  <img src="https://img.shields.io/badge/{safe_med_lbl}-{stats['medium']}-F57C00?style=for-the-badge" alt="{display_med}">
+  <img src="https://img.shields.io/badge/{safe_hard_lbl}-{stats['hard']}-C62828?style=for-the-badge" alt="{display_hard}">
 </p>
 
 
 | Metric | Overview Progress Summary |
 | :--- | :--- |
-| **Weekly Velocity** | <img src="https://img.shields.io/badge/{safe_week_vel}-blue?style=flat-square" alt="Weekly Velocity"> |
-| **Monthly Velocity** | <img src="https://img.shields.io/badge/{safe_month_vel}-blue?style=flat-square" alt="Monthly Velocity"> |
+| **Weekly Velocity** | <img src="https://img.shields.io/badge/{safe_week_vel}-blue?style=flat-square" alt="{display_week_vel}"> |
+| **Monthly Velocity** | <img src="https://img.shields.io/badge/{safe_month_vel}-blue?style=flat-square" alt="{display_month_vel}"> |
 
 ---
 

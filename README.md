@@ -7,6 +7,7 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 ## 📊 Core Performance Metrics
 
 
+
 | Metric | Overview Progress Summary |
 | :--- | :--- |
 | **Total Solved** | **3** problems completed |
@@ -27,6 +28,7 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 ---
 
 ## 🕒 Recent Submissions Activity Log
+
 
 
 | Date | Problem Title | Difficulty | Core Concept Tags |

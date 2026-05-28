@@ -127,6 +127,15 @@ def write_readme(stats, problems):
     problems.sort(key=lambda x: x["date"], reverse=True)
     recent_rows = ""
     
+    # Helper to clean labels for Shields.io URL compatibility
+    def clean_label(text):
+        text = str(text)
+        text = text.replace("-", "--")      # Shields.io format for literal dash
+        text = text.replace(" ", "%20")     # URL encode space
+        text = text.replace("/", "%2F")     # URL encode slash
+        text = text.replace("%", "%25")     # URL encode percent sign
+        return text
+    
     for p in problems[:5]:
         date_str = p["date"].strftime("%b %d, %Y")
         
@@ -141,9 +150,8 @@ def write_readme(stats, problems):
         # --- HTML TAG CLOUD FOR CORE CONCEPTS ---
         tag_badges = []
         for tag in p['topics']:
-            # Safe URL encoding for tags containing spaces or slashes
-            safe_tag = tag.replace(" ", "%20").replace("/", "%2F")
-            tag_badges.append(f'<img src="https://shields.io{safe_tag}-blue?style=flat-square" alt="{tag}">')
+            safe_tag = clean_label(tag)
+            tag_badges.append(f'<img src="https://img.shields.io/badge/{safe_tag}-blue?style=flat-square" alt="{tag}">')
         tag_str = " ".join(tag_badges)
         
         recent_rows += f"| {date_str} | [{p['title']}](./{p['folder']}) | {diff_badge} | {tag_str} |\n"
@@ -160,6 +168,13 @@ def write_readme(stats, problems):
     med_pct = round((stats['medium'] / total) * 100)
     hard_pct = round((stats['hard'] / total) * 100)
 
+    # Sanitize the header badge values to prevent bad URLs
+    safe_easy_lbl = clean_label(f"Easy ({easy_pct}%)")
+    safe_med_lbl = clean_label(f"Medium ({med_pct}%)")
+    safe_hard_lbl = clean_label(f"Hard ({hard_pct}%)")
+    safe_week_vel = clean_label(f"{stats['week_count']} problems / wk")
+    safe_month_vel = clean_label(f"{stats['month_count']} problems / mo")
+
     readme_content = f"""# 💻 LeetCode Engineering Portfolio
 
 Welcome! This repository hosts my validated algorithmic solutions, automatically synced via LeetHub 2.0 and processed by an autonomous analytics dashboard workflow. It showcases my data structure expertise, consistency, and clean code optimization.
@@ -169,17 +184,17 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 ## 📊 Core Performance Metrics
 
 <p align="left">
-  <img src="https://shields.ioTotal%20Solved-{stats['total']}-7A1FA2?style=for-the-badge&logo=leetcode" alt="Total Solved">
-  <img src="https://shields.ioEasy%20({easy_pct}%25)-{stats['easy']}-2E7D32?style=for-the-badge" alt="Easy Progress">
-  <img src="https://shields.ioMedium%20({med_pct}%25)-{stats['medium']}-F57C00?style=for-the-badge" alt="Medium Progress">
-  <img src="https://shields.ioHard%20({hard_pct}%25)-{stats['hard']}-C62828?style=for-the-badge" alt="Hard Progress">
+  <img src="https://shields.io{stats['total']}-7A1FA2?style=for-the-badge&logo=leetcode" alt="Total Solved">
+  <img src="https://img.shields.io/badge/{safe_easy_lbl}-{stats['easy']}-2E7D32?style=for-the-badge" alt="Easy Progress">
+  <img src="https://img.shields.io/badge/{safe_med_lbl}-{stats['medium']}-F57C00?style=for-the-badge" alt="Medium Progress">
+  <img src="https://img.shields.io/badge/{safe_hard_lbl}-{stats['hard']}-C62828?style=for-the-badge" alt="Hard Progress">
 </p>
 
 
 | Metric | Overview Progress Summary |
 | :--- | :--- |
-| **Weekly Velocity** | <img src="https://shields.ioVelocity-{stats['week_count']}%20problems%20/%20wk-blue?style=flat-square" alt="Weekly Velocity"> |
-| **Monthly Velocity** | <img src="https://shields.ioVelocity-{stats['month_count']}%20problems%20/%20mo-blue?style=flat-square" alt="Monthly Velocity"> |
+| **Weekly Velocity** | <img src="https://shields.io{safe_week_vel}-blue?style=flat-square" alt="Weekly Velocity"> |
+| **Monthly Velocity** | <img src="https://shields.io{safe_month_vel}-blue?style=flat-square" alt="Monthly Velocity"> |
 
 ---
 
@@ -202,12 +217,12 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 
 ---
 <p align="center">
-  <img src="https://shields.ioDashboard%20Status-Automated%20via%20GitHub%20Actions-brightgreen?style=flat-square&logo=github-actions" alt="Workflow Status">
+  <img src="https://shields.io" alt="Workflow Status">
 </p>
 """
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(readme_content)
-    print("✔ README.md successfully updated with high-end Shields.io badges.")
+    print("✔ README.md successfully updated with high-end, escaped Shields.io badges.")
 
 if __name__ == "__main__":
     problems_list = parse_local_repo()

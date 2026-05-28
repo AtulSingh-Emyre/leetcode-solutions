@@ -7,7 +7,6 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 ## 📊 Core Performance Metrics
 
 
-
 | Metric | Overview Progress Summary |
 | :--- | :--- |
 | **Total Solved** | **3** problems completed |
@@ -20,22 +19,21 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 ## ⏱️ Time-Frame Analytics (Recruiter Dashboard)
 
 ### 📅 Past 7 Days (Velocity: 3 Problems)
-* **Core Topics Mastered This Week:** `Bit Manipulation (3)` `Trie (1)`
+* **Core Topics Mastered This Week:** `String (2)` `Trie (1)`
 
 ### 📅 Past 30 Days (Velocity: 3 Problems)
-* **Core Topics Mastered This Month:** `Bit Manipulation (3)` `Trie (1)`
+* **Core Topics Mastered This Month:** `String (2)` `Trie (1)`
 
 ---
 
 ## 🕒 Recent Submissions Activity Log
 
 
-
 | Date | Problem Title | Difficulty | Core Concept Tags |
 | :--- | :--- | :--- | :--- |
-| May 28, 2026 | [Count The Number Of Special Characters I](./3120-count-the-number-of-special-characters-i) | 🟢 Easy | Bit Manipulation |
-| May 28, 2026 | [Longest Common Suffix Queries](./3093-longest-common-suffix-queries) | 🔴 Hard | Trie, Bit Manipulation |
-| May 28, 2026 | [Jump Game Vii](./1871-jump-game-vii) | 🟡 Medium | Bit Manipulation |
+| May 28, 2026 | [Count The Number Of Special Characters I](./3120-count-the-number-of-special-characters-i) | 🟢 Easy | String |
+| May 28, 2026 | [Longest Common Suffix Queries](./3093-longest-common-suffix-queries) | 🔴 Hard | Trie |
+| May 28, 2026 | [Jump Game Vii](./1871-jump-game-vii) | 🟡 Medium | String |
 
 
 ---

@@ -9,13 +9,14 @@ REPO_NAME = "leetcode-solutions"
 # ---------------------
 
 def parse_local_repo():
-    """Scans LeetHub folders to extract solved dates, difficulties, and tags."""
+    """Scans local folders and matches clean, context-filtered tags entirely offline."""
     solved_problems = []
     current_dir = os.getcwd()
-    
-    # Regex to match LeetHub folder convention: e.g., "0001-two-sum"
     leethub_folder_pattern = re.compile(r"^\d{4}-")
     
+    # Advanced vs Basic tag configuration for the filtering engine
+    basic_noise_tags = {"Array", "String", "Math", "Sorting"}
+
     for folder in os.listdir(current_dir):
         if os.path.isdir(folder) and leethub_folder_pattern.match(folder):
             readme_path = os.path.join(folder, "README.md")
@@ -25,85 +26,59 @@ def parse_local_repo():
             with open(readme_path, "r", encoding="utf-8") as f:
                 content = f.read()
             
-            # Extract basic info from the markdown LeetHub creates
             difficulty = "Easy"
             if "Medium" in content: difficulty = "Medium"
             elif "Hard" in content: difficulty = "Hard"
             
-            # Get the exact time the solution file was created/last updated by LeetHub
-            # To fall back if Git timestamps aren't present locally
             stat = os.stat(readme_path)
             solved_date = datetime.fromtimestamp(stat.st_mtime)
             
-            # Simple keyword matching to infer topics from LeetHub's problem text
-            topics = []
-            content_lower = content.lower()
+            # --- INTELLIGENT OFFLINE HEURISTIC ---
+            # Isolate the title slug (e.g. 'longest-common-suffix-queries')
+            title_slug = folder.split("-", 1)[1].lower().replace("-", " ")
             
-            # EXTENDED KEYWORDS: Added complex data structures and algorithms
-            keywords = {
-                # --- Advanced Data Structures ---
-                "Trie": ["trie", "prefix tree", "suffix tree", "suffix query", "suffix queries"],
-                "Segment Tree / Fenwick": ["segment tree", "fenwick tree", "binary indexed tree", "bit", "range query"],
-                "Union Find (DSU)": ["union find", "dsu", "disjoint set", "connected component"],
-                "Heap / Priority Queue": ["heap", "priority queue", "pq", "min-heap", "max-heap"],
-                "Monotonic Stack / Queue": ["monotonic stack", "monotonic queue", "next greater element"],
-                "Graph": ["graph", "dfs", "bfs", "matrix", "topological", "dijkstra", "mst", "kruskal", "prim", "shortest path"],
-                "Tree": ["tree", "binary tree", "bst", "node", "lowest common ancestor", "lca", "subtree"],
-                
-                # --- NEW: Linear Data Structures ---
-                "Linked List": ["linked list", "listnode", "singly linked", "doubly linked", "dummy node"],
-                
-                # --- Advanced Algorithmic Paradigms ---
-                "Dynamic Programming": ["dynamic programming", "dp", "memoization", "tabulation", "knapsack", "lcs", "lis", "kadane"],
-                "Recursion / Backtracking": ["backtracking", "recursion", "permutations", "combinations", "subset"],
-                "Divide and Conquer": ["divide and conquer", "merge sort", "quick sort"],
-                "Greedy": ["greedy", "interval", "huffman"],
-                
-                # --- Intermediate Patterns ---
-                "Sliding Window": ["sliding window", "longest substring without repeating"],
-                "Two Pointers": ["two pointers", "two-pointer", "slow fast pointer", "meeting rooms"],
-                "Binary Search": ["binary search", "bisect", "search in rotated"],
-                "Bit Manipulation": ["bit manipulation", "bitwise", "xor", "and", "or", "shift"],
-                
-                # --- NEW: Structural Patterns ---
-                "Prefix Sum": ["prefix sum", "suffix sum", "running sum", "cumulative sum"],
-                "Design": ["lru cache", "lfu cache", "design", "oops", "system design", "instantiate", "iterator"],
-                "Simulation": ["simulation", "simulate", "robot", "game of life"],
-                
-                # --- Basic Concepts ---
-                "Hash Table": ["hash table", "hash map", "dictionary", "hashset", "counter", "frequency map"],
-                "Sorting": ["sort", "sorting", "sorted"],
-                "String": ["string", "char", "substring", "palindrome", "anagram"],
-                "Array": ["array", "vector", "matrix", "subarray", "grid"],
-                "Math": ["math", "geometry", "gcd", "lcm", "prime", "modulo", "combinatorics", "probability", "base-"]
+            matched_topics = set()
+            
+            # 1. Structural Rules (Matches full conceptual phrases inside the problem description)
+            structural_rules = {
+                "Trie": ["trie", "prefix tree", "suffix tree", "suffix query", "suffix queries", "common suffix"],
+                "Linked List": ["linked list", "list node", "reverse list", "palindrome list"],
+                "Segment Tree": ["segment tree", "fenwick", "binary indexed tree", "range query"],
+                "Union Find": ["union find", "disjoint set", "connected components"],
+                "Heap / Priority Queue": ["priority queue", "kth largest", "merge k sorted"],
+                "Monotonic Stack": ["monotonic stack", "next greater element", "daily temperatures"],
+                "Sliding Window": ["sliding window", "longest substring without", "subarrays with k"],
+                "Two Pointers": ["two pointers", "two pointer", "container with most water", "3sum"],
+                "Binary Search": ["binary search", "search in rotated", "find first and last"],
+                "Bit Manipulation": ["bit manipulation", "bitwise", "number of 1 bits", "single number"],
+                "Dynamic Programming": ["dynamic programming", "coin change", "longest common subsequence", "knapsack"],
+                "Graph": ["graph", "shortest path", "bipartite", "course schedule", "clone graph", "number of islands"],
+                "Tree": ["binary tree", "lowest common ancestor", "tree diameter", "bst", "binary search tree"],
+                "Prefix Sum": ["prefix sum", "subarray sum equals k", "running sum"],
+                "Design": ["lru cache", "lfu cache", "design hit counter", "implement stack using"],
+                # Fallback Basic Concepts
+                "String": ["string", "palindrome", "anagram", "substring"],
+                "Array": ["array", "matrix", "vector", "subarray", "grid"],
+                "Math": ["math", "gcd", "lcm", "prime factor", "pow(x, n)"]
             }
-                        # ... (Inside your parse_local_repo() loop, right after content_lower = content.lower()) ...
 
-            # 1. Classify which tags are considered "Noise/Basic"
-            basic_noise_tags = {"Array", "String", "Math"}
-            
-            matched_topics = []
-            for topic, keys in keywords.items():
-                for key in keys:
-                    # \b ensures we match standalone words/phrases only
-                    pattern = r'\b' + re.escape(key.lower()) + r'\b'
-                    if re.search(pattern, content_lower):
-                        matched_topics.append(topic)
-                        break  # Move to the next topic group
-            
-            # 2. Filtering Layer: Check if any advanced tag was found
+            # Map concepts based on text patterns found in the title slug or description content
+            for topic, keywords in structural_rules.items():
+                for keyword in keywords:
+                    # Look for standalone keywords inside the problem text context
+                    if keyword in title_slug or f" {keyword} " in f" {content.lower()} ":
+                        matched_topics.add(topic)
+                        break
+
+            # 2. Smart Filtering Layer
             has_advanced_tag = any(tag not in basic_noise_tags for tag in matched_topics)
-            
             if has_advanced_tag:
-                # Keep only the advanced tags, dropping Array, String, and Math
+                # If an advanced tag is found, strip out basic container keywords like Array/String
                 topics = [tag for tag in matched_topics if tag not in basic_noise_tags]
             else:
-                # If NO advanced tags were found, fallback to the basic tags found
-                topics = matched_topics
-
-            if not topics:
-                topics.append("General")
-                
+                topics = list(matched_topics) if matched_topics else ["General"]
+            
+            # Clean up title rendering securely
             clean_title = folder.split("-", 1)[1].replace("-", " ").title()
             
             solved_problems.append({
@@ -171,7 +146,6 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 ## 📊 Core Performance Metrics
 
 
-
 | Metric | Overview Progress Summary |
 | :--- | :--- |
 | **Total Solved** | **{stats['total']}** problems completed |
@@ -192,7 +166,6 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 ---
 
 ## 🕒 Recent Submissions Activity Log
-
 
 
 | Date | Problem Title | Difficulty | Core Concept Tags |

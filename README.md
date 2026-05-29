@@ -45,3 +45,15 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260528-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [3300-minimum-element-after-replacement-with-digit-sum](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3300-minimum-element-after-replacement-with-digit-sum) |
+## Math
+|  |
+| ------- |
+| [3300-minimum-element-after-replacement-with-digit-sum](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3300-minimum-element-after-replacement-with-digit-sum) |
+<!---LeetCode Topics End-->

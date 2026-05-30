@@ -46,3 +46,23 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260529-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [3161-block-placement-queries](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3161-block-placement-queries) |
+## Binary Search
+|  |
+| ------- |
+| [3161-block-placement-queries](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3161-block-placement-queries) |
+## Binary Indexed Tree
+|  |
+| ------- |
+| [3161-block-placement-queries](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3161-block-placement-queries) |
+## Segment Tree
+|  |
+| ------- |
+| [3161-block-placement-queries](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3161-block-placement-queries) |
+<!---LeetCode Topics End-->

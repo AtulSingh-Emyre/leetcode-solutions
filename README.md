@@ -47,19 +47,3 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260531-blue" alt="Workflow Status">
 </p>
-
-<!---LeetCode Topics Start-->
-# LeetCode Topics
-## Array
-|  |
-| ------- |
-| [2126-destroying-asteroids](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/2126-destroying-asteroids) |
-## Greedy
-|  |
-| ------- |
-| [2126-destroying-asteroids](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/2126-destroying-asteroids) |
-## Sorting
-|  |
-| ------- |
-| [2126-destroying-asteroids](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/2126-destroying-asteroids) |
-<!---LeetCode Topics End-->

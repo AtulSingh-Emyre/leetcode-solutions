@@ -47,3 +47,27 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260602-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [3635-earliest-finish-time-for-land-and-water-rides-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3635-earliest-finish-time-for-land-and-water-rides-ii) |
+## Two Pointers
+|  |
+| ------- |
+| [3635-earliest-finish-time-for-land-and-water-rides-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3635-earliest-finish-time-for-land-and-water-rides-ii) |
+## Binary Search
+|  |
+| ------- |
+| [3635-earliest-finish-time-for-land-and-water-rides-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3635-earliest-finish-time-for-land-and-water-rides-ii) |
+## Greedy
+|  |
+| ------- |
+| [3635-earliest-finish-time-for-land-and-water-rides-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3635-earliest-finish-time-for-land-and-water-rides-ii) |
+## Sorting
+|  |
+| ------- |
+| [3635-earliest-finish-time-for-land-and-water-rides-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3635-earliest-finish-time-for-land-and-water-rides-ii) |
+<!---LeetCode Topics End-->

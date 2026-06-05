@@ -47,3 +47,15 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260604-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Math
+|  |
+| ------- |
+| [3753-total-waviness-of-numbers-in-range-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3753-total-waviness-of-numbers-in-range-ii) |
+## Dynamic Programming
+|  |
+| ------- |
+| [3753-total-waviness-of-numbers-in-range-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3753-total-waviness-of-numbers-in-range-ii) |
+<!---LeetCode Topics End-->

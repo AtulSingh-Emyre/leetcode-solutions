@@ -47,3 +47,15 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260605-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [2574-left-and-right-sum-differences](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/2574-left-and-right-sum-differences) |
+## Prefix Sum
+|  |
+| ------- |
+| [2574-left-and-right-sum-differences](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/2574-left-and-right-sum-differences) |
+<!---LeetCode Topics End-->

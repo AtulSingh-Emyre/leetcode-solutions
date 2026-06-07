@@ -47,3 +47,23 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260606-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [2196-create-binary-tree-from-descriptions](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/2196-create-binary-tree-from-descriptions) |
+## Hash Table
+|  |
+| ------- |
+| [2196-create-binary-tree-from-descriptions](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/2196-create-binary-tree-from-descriptions) |
+## Tree
+|  |
+| ------- |
+| [2196-create-binary-tree-from-descriptions](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/2196-create-binary-tree-from-descriptions) |
+## Binary Tree
+|  |
+| ------- |
+| [2196-create-binary-tree-from-descriptions](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/2196-create-binary-tree-from-descriptions) |
+<!---LeetCode Topics End-->

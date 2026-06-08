@@ -47,3 +47,19 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260607-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [2161-partition-array-according-to-given-pivot](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/2161-partition-array-according-to-given-pivot) |
+## Two Pointers
+|  |
+| ------- |
+| [2161-partition-array-according-to-given-pivot](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/2161-partition-array-according-to-given-pivot) |
+## Simulation
+|  |
+| ------- |
+| [2161-partition-array-according-to-given-pivot](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/2161-partition-array-according-to-given-pivot) |
+<!---LeetCode Topics End-->

@@ -47,3 +47,15 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260608-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [3689-maximum-total-subarray-value-i](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3689-maximum-total-subarray-value-i) |
+## Greedy
+|  |
+| ------- |
+| [3689-maximum-total-subarray-value-i](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3689-maximum-total-subarray-value-i) |
+<!---LeetCode Topics End-->

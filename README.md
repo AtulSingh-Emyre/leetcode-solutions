@@ -7,27 +7,27 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 ## 📊 Core Performance Metrics
 
 <p align="left">
-  <img src="https://img.shields.io/badge/Total%20Solved-16-7A1FA2?style=for-the-badge&logo=leetcode" alt="Total Solved">
-  <img src="https://img.shields.io/badge/Easy%20(31%25)-5-2E7D32?style=for-the-badge" alt="Easy (31%)">
-  <img src="https://img.shields.io/badge/Medium%20(50%25)-8-F57C00?style=for-the-badge" alt="Medium (50%)">
-  <img src="https://img.shields.io/badge/Hard%20(19%25)-3-C62828?style=for-the-badge" alt="Hard (19%)">
+  <img src="https://img.shields.io/badge/Total%20Solved-17-7A1FA2?style=for-the-badge&logo=leetcode" alt="Total Solved">
+  <img src="https://img.shields.io/badge/Easy%20(29%25)-5-2E7D32?style=for-the-badge" alt="Easy (29%)">
+  <img src="https://img.shields.io/badge/Medium%20(47%25)-8-F57C00?style=for-the-badge" alt="Medium (47%)">
+  <img src="https://img.shields.io/badge/Hard%20(24%25)-4-C62828?style=for-the-badge" alt="Hard (24%)">
 </p>
 
 
 | Metric | Overview Progress Summary |
 | :--- | :--- |
-| **Weekly Velocity** | <img src="https://img.shields.io/badge/16%20problems%20%2F%20wk-blue?style=flat-square" alt="16 problems / wk"> |
-| **Monthly Velocity** | <img src="https://img.shields.io/badge/16%20problems%20%2F%20mo-blue?style=flat-square" alt="16 problems / mo"> |
+| **Weekly Velocity** | <img src="https://img.shields.io/badge/17%20problems%20%2F%20wk-blue?style=flat-square" alt="17 problems / wk"> |
+| **Monthly Velocity** | <img src="https://img.shields.io/badge/17%20problems%20%2F%20mo-blue?style=flat-square" alt="17 problems / mo"> |
 
 ---
 
 ## ⏱️ Time-Frame Analytics (Recruiter Dashboard)
 
-### 📅 Past 7 Days (Velocity: 16 Problems)
-* **Core Topics Mastered This Week:** 📈 `Array (8)` 📈 `General (4)` 📈 `String (2)` 📈 `Trie (1)` 📈 `Tree (1)`
+### 📅 Past 7 Days (Velocity: 17 Problems)
+* **Core Topics Mastered This Week:** 📈 `Array (9)` 📈 `General (4)` 📈 `String (2)` 📈 `Trie (1)` 📈 `Tree (1)`
 
-### 📅 Past 30 Days (Velocity: 16 Problems)
-* **Core Topics Mastered This Month:** 📈 `Array (8)` 📈 `General (4)` 📈 `String (2)` 📈 `Trie (1)` 📈 `Tree (1)`
+### 📅 Past 30 Days (Velocity: 17 Problems)
+* **Core Topics Mastered This Month:** 📈 `Array (9)` 📈 `General (4)` 📈 `String (2)` 📈 `Trie (1)` 📈 `Tree (1)`
 
 ---
 
@@ -47,31 +47,3 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260612-blue" alt="Workflow Status">
 </p>
-
-<!---LeetCode Topics Start-->
-# LeetCode Topics
-## Array
-|  |
-| ------- |
-| [3559-number-of-ways-to-assign-edge-weights-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3559-number-of-ways-to-assign-edge-weights-ii) |
-## Math
-|  |
-| ------- |
-| [3559-number-of-ways-to-assign-edge-weights-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3559-number-of-ways-to-assign-edge-weights-ii) |
-## Dynamic Programming
-|  |
-| ------- |
-| [3559-number-of-ways-to-assign-edge-weights-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3559-number-of-ways-to-assign-edge-weights-ii) |
-## Bit Manipulation
-|  |
-| ------- |
-| [3559-number-of-ways-to-assign-edge-weights-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3559-number-of-ways-to-assign-edge-weights-ii) |
-## Tree
-|  |
-| ------- |
-| [3559-number-of-ways-to-assign-edge-weights-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3559-number-of-ways-to-assign-edge-weights-ii) |
-## Depth-First Search
-|  |
-| ------- |
-| [3559-number-of-ways-to-assign-edge-weights-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3559-number-of-ways-to-assign-edge-weights-ii) |
-<!---LeetCode Topics End-->

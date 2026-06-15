@@ -47,3 +47,15 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260615-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Linked List
+|  |
+| ------- |
+| [2095-delete-the-middle-node-of-a-linked-list](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/2095-delete-the-middle-node-of-a-linked-list) |
+## Two Pointers
+|  |
+| ------- |
+| [2095-delete-the-middle-node-of-a-linked-list](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/2095-delete-the-middle-node-of-a-linked-list) |
+<!---LeetCode Topics End-->

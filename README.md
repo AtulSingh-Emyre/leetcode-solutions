@@ -47,3 +47,15 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260616-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## String
+|  |
+| ------- |
+| [3614-process-string-with-special-operations-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3614-process-string-with-special-operations-ii) |
+## Simulation
+|  |
+| ------- |
+| [3614-process-string-with-special-operations-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3614-process-string-with-special-operations-ii) |
+<!---LeetCode Topics End-->

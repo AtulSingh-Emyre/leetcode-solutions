@@ -47,3 +47,11 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260617-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Math
+|  |
+| ------- |
+| [1344-angle-between-hands-of-a-clock](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1344-angle-between-hands-of-a-clock) |
+<!---LeetCode Topics End-->

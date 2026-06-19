@@ -47,3 +47,15 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260618-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [1732-find-the-highest-altitude](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1732-find-the-highest-altitude) |
+## Prefix Sum
+|  |
+| ------- |
+| [1732-find-the-highest-altitude](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1732-find-the-highest-altitude) |
+<!---LeetCode Topics End-->

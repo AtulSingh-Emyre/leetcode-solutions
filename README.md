@@ -47,3 +47,19 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260619-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [1840-maximum-building-height](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1840-maximum-building-height) |
+## Math
+|  |
+| ------- |
+| [1840-maximum-building-height](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1840-maximum-building-height) |
+## Sorting
+|  |
+| ------- |
+| [1840-maximum-building-height](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1840-maximum-building-height) |
+<!---LeetCode Topics End-->

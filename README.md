@@ -47,3 +47,23 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260620-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [1833-maximum-ice-cream-bars](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1833-maximum-ice-cream-bars) |
+## Greedy
+|  |
+| ------- |
+| [1833-maximum-ice-cream-bars](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1833-maximum-ice-cream-bars) |
+## Sorting
+|  |
+| ------- |
+| [1833-maximum-ice-cream-bars](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1833-maximum-ice-cream-bars) |
+## Counting Sort
+|  |
+| ------- |
+| [1833-maximum-ice-cream-bars](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1833-maximum-ice-cream-bars) |
+<!---LeetCode Topics End-->

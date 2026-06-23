@@ -36,14 +36,14 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 
 | Date | Problem Title | Difficulty | Core Concept Tags |
 | :--- | :--- | :--- | :--- |
-| Jun 22, 2026 | [Total Waviness Of Numbers In Range Ii](./3753-total-waviness-of-numbers-in-range-ii) | <img src="https://img.shields.io/badge/Hard-🔴-red?style=flat-square" alt="Hard"> | <img src="https://img.shields.io/badge/General-blue?style=flat-square" alt="General"> |
-| Jun 22, 2026 | [Total Waviness Of Numbers In Range I](./3751-total-waviness-of-numbers-in-range-i) | <img src="https://img.shields.io/badge/Medium-🟡-yellow?style=flat-square" alt="Medium"> | <img src="https://img.shields.io/badge/General-blue?style=flat-square" alt="General"> |
-| Jun 22, 2026 | [Maximum Total Subarray Value I](./3689-maximum-total-subarray-value-i) | <img src="https://img.shields.io/badge/Medium-🟡-yellow?style=flat-square" alt="Medium"> | <img src="https://img.shields.io/badge/Array-blue?style=flat-square" alt="Array"> |
-| Jun 22, 2026 | [Earliest Finish Time For Land And Water Rides Ii](./3635-earliest-finish-time-for-land-and-water-rides-ii) | <img src="https://img.shields.io/badge/Medium-🟡-yellow?style=flat-square" alt="Medium"> | <img src="https://img.shields.io/badge/General-blue?style=flat-square" alt="General"> |
-| Jun 22, 2026 | [Earliest Finish Time For Land And Water Rides I](./3633-earliest-finish-time-for-land-and-water-rides-i) | <img src="https://img.shields.io/badge/Easy-🟢-green?style=flat-square" alt="Easy"> | <img src="https://img.shields.io/badge/General-blue?style=flat-square" alt="General"> |
+| Jun 23, 2026 | [Total Waviness Of Numbers In Range Ii](./3753-total-waviness-of-numbers-in-range-ii) | <img src="https://img.shields.io/badge/Hard-🔴-red?style=flat-square" alt="Hard"> | <img src="https://img.shields.io/badge/General-blue?style=flat-square" alt="General"> |
+| Jun 23, 2026 | [Total Waviness Of Numbers In Range I](./3751-total-waviness-of-numbers-in-range-i) | <img src="https://img.shields.io/badge/Medium-🟡-yellow?style=flat-square" alt="Medium"> | <img src="https://img.shields.io/badge/General-blue?style=flat-square" alt="General"> |
+| Jun 23, 2026 | [Maximum Total Subarray Value I](./3689-maximum-total-subarray-value-i) | <img src="https://img.shields.io/badge/Medium-🟡-yellow?style=flat-square" alt="Medium"> | <img src="https://img.shields.io/badge/Array-blue?style=flat-square" alt="Array"> |
+| Jun 23, 2026 | [Earliest Finish Time For Land And Water Rides Ii](./3635-earliest-finish-time-for-land-and-water-rides-ii) | <img src="https://img.shields.io/badge/Medium-🟡-yellow?style=flat-square" alt="Medium"> | <img src="https://img.shields.io/badge/General-blue?style=flat-square" alt="General"> |
+| Jun 23, 2026 | [Earliest Finish Time For Land And Water Rides I](./3633-earliest-finish-time-for-land-and-water-rides-i) | <img src="https://img.shields.io/badge/Easy-🟢-green?style=flat-square" alt="Easy"> | <img src="https://img.shields.io/badge/General-blue?style=flat-square" alt="General"> |
 
 
 ---
 <p align="center">
-  <img src="https://img.shields.io/badge/Last%20Updated-20260622-blue" alt="Workflow Status">
+  <img src="https://img.shields.io/badge/Last%20Updated-20260623-blue" alt="Workflow Status">
 </p>

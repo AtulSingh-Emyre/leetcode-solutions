@@ -47,3 +47,15 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260623-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Math
+|  |
+| ------- |
+| [3700-number-of-zigzag-arrays-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3700-number-of-zigzag-arrays-ii) |
+## Dynamic Programming
+|  |
+| ------- |
+| [3700-number-of-zigzag-arrays-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3700-number-of-zigzag-arrays-ii) |
+<!---LeetCode Topics End-->

@@ -47,3 +47,31 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260625-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3739-count-subarrays-with-majority-element-ii) |
+## Hash Table
+|  |
+| ------- |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3739-count-subarrays-with-majority-element-ii) |
+## Divide and Conquer
+|  |
+| ------- |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3739-count-subarrays-with-majority-element-ii) |
+## Segment Tree
+|  |
+| ------- |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3739-count-subarrays-with-majority-element-ii) |
+## Merge Sort
+|  |
+| ------- |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3739-count-subarrays-with-majority-element-ii) |
+## Prefix Sum
+|  |
+| ------- |
+| [3739-count-subarrays-with-majority-element-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3739-count-subarrays-with-majority-element-ii) |
+<!---LeetCode Topics End-->

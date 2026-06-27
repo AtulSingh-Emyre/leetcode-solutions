@@ -7,27 +7,27 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 ## 📊 Core Performance Metrics
 
 <p align="left">
-  <img src="https://img.shields.io/badge/Total%20Solved-30-7A1FA2?style=for-the-badge&logo=leetcode" alt="Total Solved">
+  <img src="https://img.shields.io/badge/Total%20Solved-31-7A1FA2?style=for-the-badge&logo=leetcode" alt="Total Solved">
   <img src="https://img.shields.io/badge/Easy%20(23%25)-7-2E7D32?style=for-the-badge" alt="Easy (23%)">
-  <img src="https://img.shields.io/badge/Medium%20(47%25)-14-F57C00?style=for-the-badge" alt="Medium (47%)">
-  <img src="https://img.shields.io/badge/Hard%20(30%25)-9-C62828?style=for-the-badge" alt="Hard (30%)">
+  <img src="https://img.shields.io/badge/Medium%20(48%25)-15-F57C00?style=for-the-badge" alt="Medium (48%)">
+  <img src="https://img.shields.io/badge/Hard%20(29%25)-9-C62828?style=for-the-badge" alt="Hard (29%)">
 </p>
 
 
 | Metric | Overview Progress Summary |
 | :--- | :--- |
-| **Weekly Velocity** | <img src="https://img.shields.io/badge/30%20problems%20%2F%20wk-blue?style=flat-square" alt="30 problems / wk"> |
-| **Monthly Velocity** | <img src="https://img.shields.io/badge/30%20problems%20%2F%20mo-blue?style=flat-square" alt="30 problems / mo"> |
+| **Weekly Velocity** | <img src="https://img.shields.io/badge/31%20problems%20%2F%20wk-blue?style=flat-square" alt="31 problems / wk"> |
+| **Monthly Velocity** | <img src="https://img.shields.io/badge/31%20problems%20%2F%20mo-blue?style=flat-square" alt="31 problems / mo"> |
 
 ---
 
 ## ⏱️ Time-Frame Analytics (Recruiter Dashboard)
 
-### 📅 Past 7 Days (Velocity: 30 Problems)
-* **Core Topics Mastered This Week:** 📈 `Array (16)` 📈 `String (5)` 📈 `General (5)` 📈 `Linked List (2)` 📈 `Trie (1)` 📈 `Tree (1)`
+### 📅 Past 7 Days (Velocity: 31 Problems)
+* **Core Topics Mastered This Week:** 📈 `Array (17)` 📈 `String (5)` 📈 `General (5)` 📈 `Linked List (2)` 📈 `Trie (1)` 📈 `Tree (1)`
 
-### 📅 Past 30 Days (Velocity: 30 Problems)
-* **Core Topics Mastered This Month:** 📈 `Array (16)` 📈 `String (5)` 📈 `General (5)` 📈 `Linked List (2)` 📈 `Trie (1)` 📈 `Tree (1)`
+### 📅 Past 30 Days (Velocity: 31 Problems)
+* **Core Topics Mastered This Month:** 📈 `Array (17)` 📈 `String (5)` 📈 `General (5)` 📈 `Linked List (2)` 📈 `Trie (1)` 📈 `Tree (1)`
 
 ---
 
@@ -47,19 +47,3 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260627-blue" alt="Workflow Status">
 </p>
-
-<!---LeetCode Topics Start-->
-# LeetCode Topics
-## Array
-|  |
-| ------- |
-| [3020-find-the-maximum-number-of-elements-in-subset](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3020-find-the-maximum-number-of-elements-in-subset) |
-## Hash Table
-|  |
-| ------- |
-| [3020-find-the-maximum-number-of-elements-in-subset](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3020-find-the-maximum-number-of-elements-in-subset) |
-## Enumeration
-|  |
-| ------- |
-| [3020-find-the-maximum-number-of-elements-in-subset](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3020-find-the-maximum-number-of-elements-in-subset) |
-<!---LeetCode Topics End-->

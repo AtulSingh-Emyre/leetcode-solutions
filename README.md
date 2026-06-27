@@ -47,3 +47,19 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260627-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [3020-find-the-maximum-number-of-elements-in-subset](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3020-find-the-maximum-number-of-elements-in-subset) |
+## Hash Table
+|  |
+| ------- |
+| [3020-find-the-maximum-number-of-elements-in-subset](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3020-find-the-maximum-number-of-elements-in-subset) |
+## Enumeration
+|  |
+| ------- |
+| [3020-find-the-maximum-number-of-elements-in-subset](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3020-find-the-maximum-number-of-elements-in-subset) |
+<!---LeetCode Topics End-->

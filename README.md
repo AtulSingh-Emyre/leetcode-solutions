@@ -47,3 +47,19 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260628-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [1846-maximum-element-after-decreasing-and-rearranging](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1846-maximum-element-after-decreasing-and-rearranging) |
+## Greedy
+|  |
+| ------- |
+| [1846-maximum-element-after-decreasing-and-rearranging](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1846-maximum-element-after-decreasing-and-rearranging) |
+## Sorting
+|  |
+| ------- |
+| [1846-maximum-element-after-decreasing-and-rearranging](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1846-maximum-element-after-decreasing-and-rearranging) |
+<!---LeetCode Topics End-->

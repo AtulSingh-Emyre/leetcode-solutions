@@ -47,3 +47,15 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260628-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [1967-number-of-strings-that-appear-as-substrings-in-word](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1967-number-of-strings-that-appear-as-substrings-in-word) |
+## String
+|  |
+| ------- |
+| [1967-number-of-strings-that-appear-as-substrings-in-word](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1967-number-of-strings-that-appear-as-substrings-in-word) |
+<!---LeetCode Topics End-->

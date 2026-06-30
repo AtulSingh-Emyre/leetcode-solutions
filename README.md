@@ -47,3 +47,19 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260629-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Hash Table
+|  |
+| ------- |
+| [1358-number-of-substrings-containing-all-three-characters](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1358-number-of-substrings-containing-all-three-characters) |
+## String
+|  |
+| ------- |
+| [1358-number-of-substrings-containing-all-three-characters](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1358-number-of-substrings-containing-all-three-characters) |
+## Sliding Window
+|  |
+| ------- |
+| [1358-number-of-substrings-containing-all-three-characters](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1358-number-of-substrings-containing-all-three-characters) |
+<!---LeetCode Topics End-->

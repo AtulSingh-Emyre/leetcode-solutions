@@ -7,27 +7,27 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 ## 📊 Core Performance Metrics
 
 <p align="left">
-  <img src="https://img.shields.io/badge/Total%20Solved-34-7A1FA2?style=for-the-badge&logo=leetcode" alt="Total Solved">
-  <img src="https://img.shields.io/badge/Easy%20(24%25)-8-2E7D32?style=for-the-badge" alt="Easy (24%)">
-  <img src="https://img.shields.io/badge/Medium%20(50%25)-17-F57C00?style=for-the-badge" alt="Medium (50%)">
+  <img src="https://img.shields.io/badge/Total%20Solved-35-7A1FA2?style=for-the-badge&logo=leetcode" alt="Total Solved">
+  <img src="https://img.shields.io/badge/Easy%20(23%25)-8-2E7D32?style=for-the-badge" alt="Easy (23%)">
+  <img src="https://img.shields.io/badge/Medium%20(51%25)-18-F57C00?style=for-the-badge" alt="Medium (51%)">
   <img src="https://img.shields.io/badge/Hard%20(26%25)-9-C62828?style=for-the-badge" alt="Hard (26%)">
 </p>
 
 
 | Metric | Overview Progress Summary |
 | :--- | :--- |
-| **Weekly Velocity** | <img src="https://img.shields.io/badge/34%20problems%20%2F%20wk-blue?style=flat-square" alt="34 problems / wk"> |
-| **Monthly Velocity** | <img src="https://img.shields.io/badge/34%20problems%20%2F%20mo-blue?style=flat-square" alt="34 problems / mo"> |
+| **Weekly Velocity** | <img src="https://img.shields.io/badge/35%20problems%20%2F%20wk-blue?style=flat-square" alt="35 problems / wk"> |
+| **Monthly Velocity** | <img src="https://img.shields.io/badge/35%20problems%20%2F%20mo-blue?style=flat-square" alt="35 problems / mo"> |
 
 ---
 
 ## ⏱️ Time-Frame Analytics (Recruiter Dashboard)
 
-### 📅 Past 7 Days (Velocity: 34 Problems)
-* **Core Topics Mastered This Week:** 📈 `Array (18)` 📈 `String (5)` 📈 `General (5)` 📈 `Tree (3)` 📈 `Linked List (2)` 📈 `Trie (1)`
+### 📅 Past 7 Days (Velocity: 35 Problems)
+* **Core Topics Mastered This Week:** 📈 `Array (19)` 📈 `String (5)` 📈 `General (5)` 📈 `Tree (3)` 📈 `Linked List (2)` 📈 `Trie (1)`
 
-### 📅 Past 30 Days (Velocity: 34 Problems)
-* **Core Topics Mastered This Month:** 📈 `Array (18)` 📈 `String (5)` 📈 `General (5)` 📈 `Tree (3)` 📈 `Linked List (2)` 📈 `Trie (1)`
+### 📅 Past 30 Days (Velocity: 35 Problems)
+* **Core Topics Mastered This Month:** 📈 `Array (19)` 📈 `String (5)` 📈 `General (5)` 📈 `Tree (3)` 📈 `Linked List (2)` 📈 `Trie (1)`
 
 ---
 
@@ -47,31 +47,3 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260701-blue" alt="Workflow Status">
 </p>
-
-<!---LeetCode Topics Start-->
-# LeetCode Topics
-## Array
-|  |
-| ------- |
-| [2812-find-the-safest-path-in-a-grid](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/2812-find-the-safest-path-in-a-grid) |
-## Binary Search
-|  |
-| ------- |
-| [2812-find-the-safest-path-in-a-grid](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/2812-find-the-safest-path-in-a-grid) |
-## Breadth-First Search
-|  |
-| ------- |
-| [2812-find-the-safest-path-in-a-grid](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/2812-find-the-safest-path-in-a-grid) |
-## Union-Find
-|  |
-| ------- |
-| [2812-find-the-safest-path-in-a-grid](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/2812-find-the-safest-path-in-a-grid) |
-## Heap (Priority Queue)
-|  |
-| ------- |
-| [2812-find-the-safest-path-in-a-grid](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/2812-find-the-safest-path-in-a-grid) |
-## Matrix
-|  |
-| ------- |
-| [2812-find-the-safest-path-in-a-grid](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/2812-find-the-safest-path-in-a-grid) |
-<!---LeetCode Topics End-->

@@ -47,3 +47,15 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260706-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [1288-remove-covered-intervals](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1288-remove-covered-intervals) |
+## Sorting
+|  |
+| ------- |
+| [1288-remove-covered-intervals](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1288-remove-covered-intervals) |
+<!---LeetCode Topics End-->

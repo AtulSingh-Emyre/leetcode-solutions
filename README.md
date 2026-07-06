@@ -47,3 +47,19 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260705-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Math
+|  |
+| ------- |
+| [3968-maximum-manhattan-distance-after-all-moves](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3968-maximum-manhattan-distance-after-all-moves) |
+## String
+|  |
+| ------- |
+| [3968-maximum-manhattan-distance-after-all-moves](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3968-maximum-manhattan-distance-after-all-moves) |
+## Counting
+|  |
+| ------- |
+| [3968-maximum-manhattan-distance-after-all-moves](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3968-maximum-manhattan-distance-after-all-moves) |
+<!---LeetCode Topics End-->

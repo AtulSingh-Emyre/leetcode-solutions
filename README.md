@@ -7,27 +7,27 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 ## 📊 Core Performance Metrics
 
 <p align="left">
-  <img src="https://img.shields.io/badge/Total%20Solved-39-7A1FA2?style=for-the-badge&logo=leetcode" alt="Total Solved">
-  <img src="https://img.shields.io/badge/Easy%20(21%25)-8-2E7D32?style=for-the-badge" alt="Easy (21%)">
-  <img src="https://img.shields.io/badge/Medium%20(51%25)-20-F57C00?style=for-the-badge" alt="Medium (51%)">
+  <img src="https://img.shields.io/badge/Total%20Solved-40-7A1FA2?style=for-the-badge&logo=leetcode" alt="Total Solved">
+  <img src="https://img.shields.io/badge/Easy%20(20%25)-8-2E7D32?style=for-the-badge" alt="Easy (20%)">
+  <img src="https://img.shields.io/badge/Medium%20(52%25)-21-F57C00?style=for-the-badge" alt="Medium (52%)">
   <img src="https://img.shields.io/badge/Hard%20(28%25)-11-C62828?style=for-the-badge" alt="Hard (28%)">
 </p>
 
 
 | Metric | Overview Progress Summary |
 | :--- | :--- |
-| **Weekly Velocity** | <img src="https://img.shields.io/badge/39%20problems%20%2F%20wk-blue?style=flat-square" alt="39 problems / wk"> |
-| **Monthly Velocity** | <img src="https://img.shields.io/badge/39%20problems%20%2F%20mo-blue?style=flat-square" alt="39 problems / mo"> |
+| **Weekly Velocity** | <img src="https://img.shields.io/badge/40%20problems%20%2F%20wk-blue?style=flat-square" alt="40 problems / wk"> |
+| **Monthly Velocity** | <img src="https://img.shields.io/badge/40%20problems%20%2F%20mo-blue?style=flat-square" alt="40 problems / mo"> |
 
 ---
 
 ## ⏱️ Time-Frame Analytics (Recruiter Dashboard)
 
-### 📅 Past 7 Days (Velocity: 39 Problems)
-* **Core Topics Mastered This Week:** 📈 `Array (20)` 📈 `String (6)` 📈 `General (6)` 📈 `Tree (3)` 📈 `Linked List (2)` 📈 `Trie (1)` 📈 `Graph (1)`
+### 📅 Past 7 Days (Velocity: 40 Problems)
+* **Core Topics Mastered This Week:** 📈 `Array (21)` 📈 `String (6)` 📈 `General (6)` 📈 `Tree (3)` 📈 `Linked List (2)` 📈 `Trie (1)` 📈 `Graph (1)`
 
-### 📅 Past 30 Days (Velocity: 39 Problems)
-* **Core Topics Mastered This Month:** 📈 `Array (20)` 📈 `String (6)` 📈 `General (6)` 📈 `Tree (3)` 📈 `Linked List (2)` 📈 `Trie (1)` 📈 `Graph (1)`
+### 📅 Past 30 Days (Velocity: 40 Problems)
+* **Core Topics Mastered This Month:** 📈 `Array (21)` 📈 `String (6)` 📈 `General (6)` 📈 `Tree (3)` 📈 `Linked List (2)` 📈 `Trie (1)` 📈 `Graph (1)`
 
 ---
 
@@ -47,15 +47,3 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260706-blue" alt="Workflow Status">
 </p>
-
-<!---LeetCode Topics Start-->
-# LeetCode Topics
-## Array
-|  |
-| ------- |
-| [1288-remove-covered-intervals](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1288-remove-covered-intervals) |
-## Sorting
-|  |
-| ------- |
-| [1288-remove-covered-intervals](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1288-remove-covered-intervals) |
-<!---LeetCode Topics End-->

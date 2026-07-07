@@ -47,3 +47,11 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260707-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Math
+|  |
+| ------- |
+| [3754-concatenate-non-zero-digits-and-multiply-by-sum-i](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3754-concatenate-non-zero-digits-and-multiply-by-sum-i) |
+<!---LeetCode Topics End-->

@@ -47,3 +47,27 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260709-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [3532-path-existence-queries-in-a-graph-i](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3532-path-existence-queries-in-a-graph-i) |
+## Hash Table
+|  |
+| ------- |
+| [3532-path-existence-queries-in-a-graph-i](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3532-path-existence-queries-in-a-graph-i) |
+## Binary Search
+|  |
+| ------- |
+| [3532-path-existence-queries-in-a-graph-i](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3532-path-existence-queries-in-a-graph-i) |
+## Union-Find
+|  |
+| ------- |
+| [3532-path-existence-queries-in-a-graph-i](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3532-path-existence-queries-in-a-graph-i) |
+## Graph Theory
+|  |
+| ------- |
+| [3532-path-existence-queries-in-a-graph-i](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3532-path-existence-queries-in-a-graph-i) |
+<!---LeetCode Topics End-->

@@ -47,3 +47,11 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260713-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Enumeration
+|  |
+| ------- |
+| [1291-sequential-digits](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/1291-sequential-digits) |
+<!---LeetCode Topics End-->

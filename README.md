@@ -47,3 +47,23 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260722-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [3501-maximize-active-section-with-trade-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3501-maximize-active-section-with-trade-ii) |
+## String
+|  |
+| ------- |
+| [3501-maximize-active-section-with-trade-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3501-maximize-active-section-with-trade-ii) |
+## Binary Search
+|  |
+| ------- |
+| [3501-maximize-active-section-with-trade-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3501-maximize-active-section-with-trade-ii) |
+## Segment Tree
+|  |
+| ------- |
+| [3501-maximize-active-section-with-trade-ii](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3501-maximize-active-section-with-trade-ii) |
+<!---LeetCode Topics End-->

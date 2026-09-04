@@ -47,3 +47,15 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 <p align="center">
   <img src="https://img.shields.io/badge/Last%20Updated-20260903-blue" alt="Workflow Status">
 </p>
+
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Array
+|  |
+| ------- |
+| [3903-smallest-stable-index-i](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3903-smallest-stable-index-i) |
+## Prefix Sum
+|  |
+| ------- |
+| [3903-smallest-stable-index-i](https://github.com/AtulSingh-Emyre/leetcode-solutions/tree/master/3903-smallest-stable-index-i) |
+<!---LeetCode Topics End-->

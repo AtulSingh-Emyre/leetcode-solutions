@@ -36,14 +36,14 @@ Welcome! This repository hosts my validated algorithmic solutions, automatically
 
 | Date | Problem Title | Difficulty | Core Concept Tags |
 | :--- | :--- | :--- | :--- |
-| Sep 05, 2026 | [Maximum Manhattan Distance After All Moves](./3968-maximum-manhattan-distance-after-all-moves) | <img src="https://img.shields.io/badge/Medium-🟡-yellow?style=flat-square" alt="Medium"> | <img src="https://img.shields.io/badge/String-blue?style=flat-square" alt="String"> |
-| Sep 05, 2026 | [Smallest Stable Index I](./3903-smallest-stable-index-i) | <img src="https://img.shields.io/badge/Easy-🟢-green?style=flat-square" alt="Easy"> | <img src="https://img.shields.io/badge/Array-blue?style=flat-square" alt="Array"> |
-| Sep 05, 2026 | [Sum Of Gcd Of Formed Pairs](./3867-sum-of-gcd-of-formed-pairs) | <img src="https://img.shields.io/badge/Medium-🟡-yellow?style=flat-square" alt="Medium"> | <img src="https://img.shields.io/badge/Array-blue?style=flat-square" alt="Array"> <img src="https://img.shields.io/badge/Math-blue?style=flat-square" alt="Math"> |
-| Sep 05, 2026 | [Concatenate Non Zero Digits And Multiply By Sum I](./3754-concatenate-non-zero-digits-and-multiply-by-sum-i) | <img src="https://img.shields.io/badge/Easy-🟢-green?style=flat-square" alt="Easy"> | <img src="https://img.shields.io/badge/General-blue?style=flat-square" alt="General"> |
-| Sep 05, 2026 | [Total Waviness Of Numbers In Range Ii](./3753-total-waviness-of-numbers-in-range-ii) | <img src="https://img.shields.io/badge/Hard-🔴-red?style=flat-square" alt="Hard"> | <img src="https://img.shields.io/badge/General-blue?style=flat-square" alt="General"> |
+| Sep 06, 2026 | [Maximum Manhattan Distance After All Moves](./3968-maximum-manhattan-distance-after-all-moves) | <img src="https://img.shields.io/badge/Medium-🟡-yellow?style=flat-square" alt="Medium"> | <img src="https://img.shields.io/badge/String-blue?style=flat-square" alt="String"> |
+| Sep 06, 2026 | [Smallest Stable Index I](./3903-smallest-stable-index-i) | <img src="https://img.shields.io/badge/Easy-🟢-green?style=flat-square" alt="Easy"> | <img src="https://img.shields.io/badge/Array-blue?style=flat-square" alt="Array"> |
+| Sep 06, 2026 | [Sum Of Gcd Of Formed Pairs](./3867-sum-of-gcd-of-formed-pairs) | <img src="https://img.shields.io/badge/Medium-🟡-yellow?style=flat-square" alt="Medium"> | <img src="https://img.shields.io/badge/Array-blue?style=flat-square" alt="Array"> <img src="https://img.shields.io/badge/Math-blue?style=flat-square" alt="Math"> |
+| Sep 06, 2026 | [Concatenate Non Zero Digits And Multiply By Sum I](./3754-concatenate-non-zero-digits-and-multiply-by-sum-i) | <img src="https://img.shields.io/badge/Easy-🟢-green?style=flat-square" alt="Easy"> | <img src="https://img.shields.io/badge/General-blue?style=flat-square" alt="General"> |
+| Sep 06, 2026 | [Total Waviness Of Numbers In Range Ii](./3753-total-waviness-of-numbers-in-range-ii) | <img src="https://img.shields.io/badge/Hard-🔴-red?style=flat-square" alt="Hard"> | <img src="https://img.shields.io/badge/General-blue?style=flat-square" alt="General"> |
 
 
 ---
 <p align="center">
-  <img src="https://img.shields.io/badge/Last%20Updated-20260905-blue" alt="Workflow Status">
+  <img src="https://img.shields.io/badge/Last%20Updated-20260906-blue" alt="Workflow Status">
 </p>
